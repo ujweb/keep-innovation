@@ -1,0 +1,111 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 1;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo__group {
+        display: flex;
+        gap: 0.5rem;
+        img {
+            display: block;
+            height: 2.5rem;
+            @include media-breakpoint-up(md) {
+                height: 3.75rem;
+            }
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    .function__group {
+        display: flex;
+        gap: 0.625rem;
+    }
+    .btn {
+        &--circle {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.75rem;
+            height: 2.5rem;
+            padding: 0;
+            color: $secondary;
+            font-size: 1.625rem;
+            background-color: transparent;
+            border: 0;
+        }
+        &--translator {
+            position: relative;
+            &::before,
+            &::after {
+                @include beforeafter;
+                position: absolute;
+                width: 0.45em;
+                padding-top: 0.45em;
+                background-color: white;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+            &::before {
+                top: 0.55em;
+                left: 0.625em;
+            }
+            &::after {
+                bottom: 0.077em;
+                right: 0.165em;
+            }
+        }
+    }
+    .fontsize__group {
+        position: relative;
+    }
+    .fontsize__dropdown {
+        display: none;
+        position: absolute;
+        top: calc(100% + .5rem);
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        ul {
+            @include listreset;
+            background-color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 1.375rem;
+            box-shadow: 0 .125rem .25rem rgba(black, 0.25);
+            overflow: hidden;
+        }
+        li + li {
+            border-top: 1px solid #E7E7E7;
+        }
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.75rem;
+            height: 2.75rem;
+            padding: 0;
+            color: #16474B;
+            background: none;
+            border: 0;
+            appearance: none;
+
+            &:hover {
+                background-color: #F1FCFC;
+            }
+        }
+    }
+}
