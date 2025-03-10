@@ -12,6 +12,16 @@ function onChangeFontSize(value) {
   console.log(value);
 }
 
+function onToggleFZSlideUp() {
+  var dropdownEl = '.fontsize__dropdown';
+  $(dropdownEl).slideUp();
+}
+
+function onToggleFZSlideDown() {
+  var dropdownEl = '.fontsize__dropdown';
+  $(dropdownEl).slideDown();
+}
+
 $(document).ready(function () {
   googleTranslateElementInit();
 });
