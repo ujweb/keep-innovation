@@ -1,12 +1,54 @@
----
-title: 首頁
-description: 新創圓夢網，臺灣最大的創業資源平台，提供創業貸款、創新創業、創業計劃書撰寫方法等資訊以及提供創業諮詢服務...。
-keywords: 創業貸款, 創業諮詢, 青年創業貸款, 微型創業貸款, 創業計劃書, 創業輔導, 網路開店
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>首頁</title>
+        <meta name="description" content="新創圓夢網，臺灣最大的創業資源平台，提供創業貸款、創新創業、創業計劃書撰寫方法等資訊以及提供創業諮詢服務...。" />
+        <meta name="keywords" content="創業貸款, 創業諮詢, 青年創業貸款, 微型創業貸款, 創業計劃書, 創業輔導, 網路開店" />
+        <meta name="author" content="新創圓夢網" />
+        <meta name="company" content="經濟部中小及新創企業署" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Noto+Sans+TC:wght@400&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/index.css" />
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </head>
 
+    <body>
+        <header>
+    <a href="#u" accesskey="u" class="accesskey" title="選單連結區塊">:::</a>
+    <div class="container">
+        <div class="logo__group">
+            <a href="https://startup.sme.gov.tw/" class="logo--master"><img src="./assets/images/logo.png" alt="新創圓夢網" /></a>
+            <a href="/" class="logo--channel"><img src="./assets/images/logo-channel.png" alt="" /></a>
+        </div>
+        <div class="function__group">
+            <div class="fontsize__group">
+                <button type="button" class="btn--circle btn--primary btn--fontsize">
+                    <i class="icon-font-size"></i>
+                </button>
+                <div class="fontsize__dropdown">
+                    <ul>
+                        <li><button onclick="onChangeFontSize('sm')" type="button">小</button></li>
+                        <li><button onclick="onChangeFontSize('md')" type="button">中</button></li>
+                        <li><button onclick="onChangeFontSize('lg')" type="button">大</button></li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn--circle btn--primary btn--translator">
+                <i class="icon-translator"></i>
+                <div id="google_translate_element"></div>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+        <main>
+            <a href="#c" accesskey="c" class="accesskey" title="中央內容區塊">:::</a>
+            
 <section class="hero__banner">
     <!-- <div id="canvas-container" class="canvas-wrapper hero__banner--background"></div> -->
     <div class="hero__banner--background"></div>
@@ -258,3 +300,47 @@ current: index
         gl_FragColor = vec4(r, g, b, 1.0);
     }
 </script>
+
+        </main>
+
+        <footer>
+    <a href="#z" accesskey="z" class="accesskey" title="頁尾網站資訊">:::</a>
+    <div class="container">
+        <div class="row">
+            <div class="unit__group">
+                <div class="unit__item">
+                    <div class="item__title">主辦單位｜</div>
+                    <div class="item__image">
+                        <img src="./assets/images/logo-sme.png" alt="經濟部中小及新創企業署" class="item__image--sme" />
+                    </div>
+                </div>
+                <div class="unit__item">
+                    <div class="item__title">執行單位｜</div>
+                    <div class="item__image">
+                        <img src="./assets/images/logo-nasme.svg" alt="中華民國全國中小企業總會" class="item__image--nasme" />
+                        <img src="./assets/images/logo-niea.png" alt="全國創新創業總會" class="item__image--niea" />
+                    </div>
+                </div>
+            </div>
+            <ul class="contact__list contact__list--server">
+                <li>連絡電話：<a href="tel:+0223660812">(02)2366-0812</a>分機170或<a href="tel:0800589168">0800-589-168</a></li>
+                <li>服務時間：週一到週五 早上09:00－晚上6:00</li>
+            </ul>
+            <ul class="contact__list contact__list--links">
+                <li><a href="https://startup.sme.gov.tw/">回新創圓夢網</a></li>
+                <li><a href="https://startup.sme.gov.tw/home/modules/article/openDeclaration.php">政府網站資料公開宣告</a></li>
+                <li><a href="#!">隱私權政策和網站安全政策</a></li>
+            </ul>
+            <div class="browser">建議瀏覽器：Edge、Chrome 31、Firefox 31 以上版本</div>
+        </div>
+    </div>
+</footer>
+ <script type="text/javascript" src="./assets/js/vendors.js"></script>
+<script type="text/javascript" src="./assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+<!-- <script type="text/javascript" src="./static/js/sketch.js"></script> -->
+
+    </body>
+</html>
