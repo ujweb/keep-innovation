@@ -1,0 +1,25 @@
+.article-hero-banner {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        color: $gray-450;
+    }
+
+    img {
+        grid-column: span 2;
+        display: block;
+        width: 100%;
+        aspect-ratio: 794/476;
+        object-fit: cover;
+        border-radius: .25rem;
+    }
+
+    .article-publish-date {
+        text-align: left;
+    }
+
+    .article-viewer {
+        text-align: right;
+    }
+}

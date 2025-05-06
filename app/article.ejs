@@ -12,24 +12,21 @@
         <meta name="company" content="經濟部中小及新創企業署" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+TC:wght@400;500&display=swap" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@egjs/flicking@4.6.0/dist/flicking.css" />
-        <link rel="stylesheet" href="https://naver.github.io/egjs-flicking-plugins/release/latest/dist/flicking-plugins.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="/assets/css/index.css" />
         <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </head>
 
     <body>
+        <span class="article-background article-background-<%- category %>"><span class="light"></span><span class="dark"></span></span>
+
         <%- include ('/layout/_header.ejs') %>
 
-        <main>
+        <article>
             <a href="#c" accesskey="c" class="accesskey" title="中央內容區塊">:::</a>
             <%- contents %>
-        </main>
+        </article>
 
-        <%- include ('/layout/_footer.ejs') %>
-        <script type="text/javascript" src="/assets/js/vendors.js"></script>
-        <%- include ('/layout/_index-script.ejs') %>
-        <script type="text/javascript" src="/assets/js/main.js"></script>
+        <%- include ('/layout/_footer.ejs') %> <%- include ('/layout/_script.ejs') %>
     </body>
 </html>

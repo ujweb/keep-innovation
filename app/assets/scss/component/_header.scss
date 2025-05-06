@@ -40,7 +40,7 @@ header {
             align-items: center;
             justify-content: center;
             width: 2.75rem;
-            height: 2.5rem;
+            height: 3rem;
             padding: 0;
             color: $secondary;
             font-size: 1.625rem;
@@ -54,17 +54,17 @@ header {
                 @include beforeafter;
                 position: absolute;
                 width: 0.45em;
-                padding-top: 0.45em;
+                padding-top: 0.4em;
                 background-color: white;
                 transform: translate(-50%, -50%);
                 z-index: -1;
             }
             &::before {
-                top: 0.55em;
+                top: 0.7em;
                 left: 0.625em;
             }
             &::after {
-                bottom: 0.077em;
+                bottom: 0.3em;
                 right: 0.165em;
             }
         }
@@ -75,7 +75,7 @@ header {
     .fontsize__dropdown {
         display: none;
         position: absolute;
-        top: calc(100% + .5rem);
+        top: 100%;
         left: 50%;
         transform: translate(-50%, 0);
 
@@ -89,7 +89,7 @@ header {
             overflow: hidden;
         }
         li + li {
-            border-top: 1px solid #E7E7E7;
+            border-top: .0625rem solid #E7E7E7;
         }
         button {
             display: flex;

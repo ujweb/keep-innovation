@@ -1,5 +1,7 @@
 body {
-    font-family: "Inter", "Noto Sans TC", sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, Noto Sans TC, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 微軟正黑體, Microsoft JhengHei;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -29,4 +31,17 @@ optgroup,
 select,
 textarea {
     font-family: inherit;
+}
+
+.sr-only {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }

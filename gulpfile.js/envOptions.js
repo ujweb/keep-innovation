@@ -33,6 +33,9 @@ let envOptions = {
     img: {
         src: [`${srcPath}/assets/images/**/*`],
     },
+    module: {
+        src: [`${srcPath}/assets/module/**/*`],
+    },
     fonts: {
         src: [`${srcPath}/assets/fonts/**/*`],
     },

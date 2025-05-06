@@ -1,0 +1,137 @@
+.article-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 10rem;
+    pointer-events: none;
+    opacity: 0.9;
+    overflow: hidden;
+    z-index: -1;
+    @at-root .article-background-orange#{&} {
+        background-color: #f29745;
+    }
+    @at-root .article-background-blue#{&} {
+        background-color: #1AB6BB;
+    }
+    @at-root .article-background-yellow#{&} {
+        background-color: #FFD81B;
+    }
+    @include media-breakpoint-up(md) {
+        height: 17.5rem;
+    }
+    &::after {
+        @include clear;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 1) 100%);
+    }
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        &::before,
+        &::after {
+            @include clear;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            filter: blur(10vw);
+            @include media-breakpoint-up(md) {
+                filter: blur(4vw);
+            }
+        }
+        &.light {
+            &::before {
+                top: 0;
+                left: 0;
+                transform: translate(-25%, -25%);
+                @at-root .article-background-orange#{&} {
+                    background-color: #fadbb1;
+                }
+                @at-root .article-background-blue#{&} {
+                    background-color: #68C1BE;
+                }
+                @at-root .article-background-yellow#{&} {
+                    background-color: #FEFB8E;
+                }
+                @include media-breakpoint-up(md) {
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &::after {
+                bottom: 0;
+                right: 0;
+                transform: translate(25%, 25%);
+                @at-root .article-background-orange#{&} {
+                    background-color: #fadbb1;
+                }
+                @at-root .article-background-blue#{&} {
+                    background-color: #B3D2D0;
+                }
+                @at-root .article-background-yellow#{&} {
+                    background-color: #FEFB8E;
+                }
+                @include media-breakpoint-up(md) {
+                    transform: translate(50%, 50%);
+                    @at-root .article-background-orange#{&} {
+                        background-color: #fdf3de;
+                    }
+                }
+            }
+        }
+        &.dark {
+            &::before {
+                bottom: 0;
+                left: 0;
+                transform: translate(-25%, 25%);
+                @at-root .article-background-orange#{&} {
+                    background-color: #f29745;
+                }
+                @at-root .article-background-blue#{&} {
+                    background-color: #3BB5B8;
+                }
+                @at-root .article-background-yellow#{&} {
+                    background-color: #FFD81B;
+                }
+                @include media-breakpoint-up(md) {
+                    transform: translate(-50%, 50%);
+                    @at-root .article-background-orange#{&} {
+                        background-color: #ec6303;
+                    }
+                    @at-root .article-background-blue#{&} {
+                        background-color: #008B8B;
+                    }
+                    @at-root .article-background-yellow#{&} {
+                        background-color: #F7B200;
+                    }
+                }
+            }
+            &::after {
+                top: 0;
+                right: 0;
+                transform: translate(25%, -25%);
+                @at-root .article-background-orange#{&} {
+                    background-color: #f29745;
+                }
+                @at-root .article-background-blue#{&} {
+                    background-color: #359C9B;
+                }
+                @at-root .article-background-yellow#{&} {
+                    background-color: #FFFEFF;
+                }
+                @include media-breakpoint-up(md) {
+                    transform: translate(50%, -50%);
+                }
+            }
+        }
+    }
+}

@@ -45,9 +45,19 @@
         content: $icon-circle-play;
     }
 }
+.icon-cross {
+    &:before {
+        content: $icon-cross;
+    }
+}
 .icon-font-size {
     &:before {
         content: $icon-font-size;
+    }
+}
+.icon-sparkling {
+    &:before {
+        content: $icon-sparkling;
     }
 }
 .icon-taiwan {

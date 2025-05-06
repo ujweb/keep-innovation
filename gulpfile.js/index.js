@@ -4,6 +4,7 @@ const autoprefixer = require("autoprefixer");
 const minimist = require("minimist");
 const browserSync = require("browser-sync").create();
 const { envOptions } = require("./envOptions");
+const srcPath = "./app";
 
 let options = minimist(process.argv.slice(2), envOptions);
 //現在開發狀態
@@ -27,7 +28,10 @@ function layoutHTML() {
         .pipe($.frontMatter())
         .pipe(
             $.layout((file) => {
-                return file.frontMatter;
+                return {
+                    ...file.frontMatter,
+                    root: srcPath,
+                };
             })
         )
         .pipe(gulp.dest(envOptions.html.path))
@@ -104,6 +108,7 @@ function watch() {
     gulp.watch(envOptions.html.ejsSrc, gulp.series(layoutHTML));
     gulp.watch(envOptions.javascript.src, gulp.series(babel));
     gulp.watch(envOptions.img.src, gulp.series(copyFile));
+    gulp.watch(envOptions.module.src, gulp.series(copyFile));
     gulp.watch(envOptions.fonts.src, gulp.series(copyFile));
     gulp.watch(envOptions.scss.src, gulp.series(sass));
 }
