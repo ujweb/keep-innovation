@@ -147,9 +147,10 @@ $(document).ready(function () {
   dataModules.forEach(function (element) {
     new countUp(element);
   });
-}); // ====================
+});
+AOS.init(); // ====================
 
-var flicking = new Flicking("#hero__banner--flicking", {
+var heroBannerFlicking = new Flicking("#hero__banner--flicking", {
   circular: true,
   renderOnlyVisible: true
 }).on("willChange", function (e) {
@@ -162,7 +163,7 @@ var flicking = new Flicking("#hero__banner--flicking", {
   var index = e.index; // TODO: 建立圖片往上位移滾動機制
   // TODO: 圖片 Blur-In
 
-  console.log(document.querySelectorAll('.hero__banner__image'));
+  console.log(document.querySelectorAll(".hero__banner__image"));
 });
 
 var onChangeHeroBannerBackground = function onChangeHeroBannerBackground(index) {
@@ -186,6 +187,26 @@ var onChangeHeroBannerBackground = function onChangeHeroBannerBackground(index) 
 
 var onChangeHeroBannerFlicking = function onChangeHeroBannerFlicking(index) {
   console.log(index);
-}; // flicking.addPlugins(new Flicking.Plugins.AutoPlay({ duration: 5000 }));
-// flicking.addPlugins(new Flicking.Plugins.Fade());
+}; // heroBannerFlicking.addPlugins(new Flicking.Plugins.AutoPlay({ duration: 5000 }));
+// heroBannerFlicking.addPlugins(new Flicking.Plugins.Fade());
+
+
+var flickingOptions = {
+  circular: true,
+  bound: true,
+  panelsPerView: 1,
+  align: "center",
+  moveType: "strict",
+  renderOnlyVisible: true
+};
+document.querySelectorAll(".item__slider--flicking").forEach(function (el) {
+  var flicking = new Flicking(el, flickingOptions);
+  var arrowPlugin = new Flicking.Plugins.Arrow({
+    parentEl: el,
+    // 指向每個自己的容器
+    prevElSelector: ".flicking-arrow-prev",
+    nextElSelector: ".flicking-arrow-next"
+  });
+  flicking.addPlugins(arrowPlugin);
+});
 //# sourceMappingURL=main.js.map
