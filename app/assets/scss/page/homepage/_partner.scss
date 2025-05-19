@@ -1,0 +1,38 @@
+.partner__list {
+    display: grid;
+    gap: 2.8125rem;
+    margin: 5rem 0;
+    text-align: center;
+
+    .container {
+        max-width: 64.5rem;
+
+        @include media-breakpoint-down(md) {
+            padding: 0 .5rem;
+        }
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1;
+    }
+    ul {
+        @include list(0, 0, none);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .625rem;
+
+        @include media-breakpoint-up(md) {
+            gap: 1.5rem;
+        }
+
+        img {
+            display: block;
+            height: 3rem;
+        }
+    }
+}

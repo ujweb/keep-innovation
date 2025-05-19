@@ -63,6 +63,9 @@ const onChangeHeroBannerBackground = (index) => {
         case 2:
             switchToColorSet3();
             break;
+        case 3:
+            switchToColorSet4();
+            break;
         default:
             break;
     }
