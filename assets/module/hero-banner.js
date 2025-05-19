@@ -205,9 +205,18 @@ function switchToColorSet3() {
     transitionStartTime = null; // 重置過渡時間
 }
 
+function switchToColorSet4() {
+    targetColor1 = new THREE.Color("#2D31A5");
+    targetColor2 = new THREE.Color("#5256C4");
+    targetColor3 = new THREE.Color("#7F84E6");
+    targetColor4 = new THREE.Color("#DADAFE");
+    transitionStartTime = null; // 重置過渡時間
+}
+
 window.switchToColorSet1 = switchToColorSet1;
 window.switchToColorSet2 = switchToColorSet2;
 window.switchToColorSet3 = switchToColorSet3;
+window.switchToColorSet4 = switchToColorSet4;
 
 // 動畫更新函數
 function animate(t) {

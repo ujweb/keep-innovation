@@ -180,6 +180,10 @@ var onChangeHeroBannerBackground = function onChangeHeroBannerBackground(index) 
       switchToColorSet3();
       break;
 
+    case 3:
+      switchToColorSet4();
+      break;
+
     default:
       break;
   }
