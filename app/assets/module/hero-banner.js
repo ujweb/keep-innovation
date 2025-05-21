@@ -12,26 +12,23 @@ const paddingBottom = 444;
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / (window.innerHeight + paddingBottom), 0.1, 100);
 
 // 初始顏色
-let color1 = new THREE.Color("#1D4843");
-let color2 = new THREE.Color("#288990");
-let color3 = new THREE.Color("#8AE5E5");
-let color4 = new THREE.Color("#dffdfd");
+let color1 = new THREE.Color("#0E8A89");
+let color2 = new THREE.Color("#27B4B9");
+let color3 = new THREE.Color("#D8EFEE");
 
 // 顏色過渡變數
 let targetColor1 = color1.clone();
 let targetColor2 = color2.clone();
 let targetColor3 = color3.clone();
-let targetColor4 = color4.clone();
 
 // 顏色過渡的時間（秒）
 let transitionDuration = 1;
 let transitionStartTime = null;
 
 const params = {
-    color1: "#1D4843",
-    color2: "#288990",
-    color3: "#8AE5E5",
-    color4: "#dffdfd",
+    color1: "#0E8A89",
+    color2: "#27B4B9",
+    color3: "#D8EFEE",
     uStrength: 3.4,
     uSpeed: 0.25,
     uDensity: 1.2,
@@ -49,7 +46,7 @@ const params = {
     cDistance: 4.4,
     cameraZoom: 1,
     wireframe: false,
-    brightness: 1.2,
+    brightness: 1,
     scale: 2.75,
 };
 
@@ -69,7 +66,6 @@ const uniforms = {
     color1: { value: new THREE.Color(params.color1) },
     color2: { value: new THREE.Color(params.color2) },
     color3: { value: new THREE.Color(params.color3) },
-    color4: { value: new THREE.Color(params.color4) },
     brightness: { value: params.brightness },
 };
 
@@ -112,8 +108,8 @@ void main() {
     float noiseY = perlin(vec2(pos.x * u_density - 10.0 + u_time * u_speed, pos.z * u_density - 10.0 + u_time * u_speed));
 
     float waveZ = noiseZ * u_strength * 0.5;
-    float waveX = noiseX * u_strength * 0.15;
-    float waveY = noiseY * u_strength * 0.15;
+    float waveX = noiseX * u_strength * 0.25;
+    float waveY = noiseY * u_strength * 0.125;
 
     pos.z += waveZ;
     pos.x += waveX;
@@ -128,7 +124,6 @@ const fragmentShader = `
 uniform vec3 color1;
 uniform vec3 color2;
 uniform vec3 color3;
-uniform vec3 color4;
 uniform float brightness;
 varying vec2 vUv;
 varying float vWave;
@@ -136,9 +131,8 @@ varying float vWave;
 void main() {
     vec3 gradient = mix(color1, color2, vUv.y);
     vec3 mixed = mix(gradient, color3, vWave * 0.5 + 0.5);
-    vec3 finalColor = mix(mixed, color4, 0.1);
 
-    gl_FragColor = vec4(finalColor * brightness, 1.0);
+    gl_FragColor = vec4(mixed * brightness, 1.0);
 }
 `;
 
@@ -167,49 +161,42 @@ function updateColors(t) {
         color1.lerp(targetColor1, elapsedTime / transitionDuration);
         color2.lerp(targetColor2, elapsedTime / transitionDuration);
         color3.lerp(targetColor3, elapsedTime / transitionDuration);
-        color4.lerp(targetColor4, elapsedTime / transitionDuration);
         uniforms.color1.value.set(color1);
         uniforms.color2.value.set(color2);
         uniforms.color3.value.set(color3);
-        uniforms.color4.value.set(color4);
     } else {
         uniforms.color1.value.set(targetColor1);
         uniforms.color2.value.set(targetColor2);
         uniforms.color3.value.set(targetColor3);
-        uniforms.color4.value.set(targetColor3);
     }
 }
 
 // 顏色切換函數
 function switchToColorSet1() {
-    targetColor1 = new THREE.Color("#1D4843");
-    targetColor2 = new THREE.Color("#288990");
-    targetColor3 = new THREE.Color("#8AE5E5");
-    targetColor4 = new THREE.Color("#dffdfd");
+    targetColor1 = new THREE.Color("#0E8A89");
+    targetColor2 = new THREE.Color("#27B4B9");
+    targetColor3 = new THREE.Color("#D8EFEE");
     transitionStartTime = null; // 重置過渡時間
 }
 
 function switchToColorSet2() {
-    targetColor1 = new THREE.Color("#D04C14");
-    targetColor2 = new THREE.Color("#E86A0E");
-    targetColor3 = new THREE.Color("#F3A55C");
-    targetColor4 = new THREE.Color("#ffe7d0");
+    targetColor1 = new THREE.Color("#ED7012");
+    targetColor2 = new THREE.Color("#F3A460");
+    targetColor3 = new THREE.Color("#FADAB2");
     transitionStartTime = null; // 重置過渡時間
 }
 
 function switchToColorSet3() {
-    targetColor1 = new THREE.Color("#C1780B");
-    targetColor2 = new THREE.Color("#DF9C18");
-    targetColor3 = new THREE.Color("#FED931");
-    targetColor4 = new THREE.Color("#fff2b8");
+    targetColor1 = new THREE.Color("#F8B300");
+    targetColor2 = new THREE.Color("#FFE029");
+    targetColor3 = new THREE.Color("#FEFDC7");
     transitionStartTime = null; // 重置過渡時間
 }
 
 function switchToColorSet4() {
-    targetColor1 = new THREE.Color("#2D31A5");
-    targetColor2 = new THREE.Color("#5256C4");
-    targetColor3 = new THREE.Color("#7F84E6");
-    targetColor4 = new THREE.Color("#DADAFE");
+    targetColor1 = new THREE.Color("#5F63C3");
+    targetColor2 = new THREE.Color("#A1A3DE");
+    targetColor3 = new THREE.Color("#DFDFF2");
     transitionStartTime = null; // 重置過渡時間
 }
 

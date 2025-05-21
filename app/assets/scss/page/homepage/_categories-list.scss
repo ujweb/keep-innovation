@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 4rem;
     margin-bottom: 4rem;
+    overflow: hidden;
 
     @include media-breakpoint-up(md) {
         gap: 4.375rem;

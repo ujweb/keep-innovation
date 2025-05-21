@@ -1,6 +1,7 @@
 .numeric__grade {
     padding-top: 2.625rem;
     padding-bottom: 6.25rem;
+    overflow: hidden;
     @include media-breakpoint-up(md) {
         padding-bottom: 10.75rem;
     }
