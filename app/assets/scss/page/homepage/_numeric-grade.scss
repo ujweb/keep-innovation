@@ -1,13 +1,16 @@
 .numeric__grade {
+    position: relative;
     padding-top: 2.625rem;
-    padding-bottom: 6.25rem;
     overflow: hidden;
-    @include media-breakpoint-up(md) {
+    z-index: 1;
+    @include media-breakpoint-up(lg) {
         padding-bottom: 10.75rem;
     }
 
     .container {
-        max-width: 71rem;
+        @include media-breakpoint-up(lg) {
+            max-width: 71rem;
+        }
     }
 
     ul {
