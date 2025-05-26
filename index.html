@@ -53,64 +53,6 @@
             
 <section class="hero__banner">
     <canvas id="shaderCanvas"></canvas>
-    <div id="hero__banner--flicking" class="hero__banner--flicking flicking-viewport">
-        <div class="flicking-camera">
-            <div class="flicking-panel">
-                <div class="container container--image">
-                    <img src="assets/images/hero-banner-1-index-1.jpg" alt="" class="hero__banner__image hero__banner__image--1" />
-                    <img src="assets/images/hero-banner-1-index-2.jpg" alt="" class="hero__banner__image hero__banner__image--2" />
-                    <img src="assets/images/hero-banner-1-index-3.jpg" alt="" class="hero__banner__image hero__banner__image--3" />
-                    <a href="#!" alt="離開地球表面！ 臺灣低軌衛星的先導者：鐳洋科技" class="hero__banner__article hero__banner__article--blue">
-                        <span class="article--label">#種子期</span>
-                        <span class="article--title">離開地球表面！ 臺灣低軌衛星的先導者：鐳洋科技</span>
-                        <span class="article--company">
-                            <span>鐳洋科技</span>
-                            <i class="icon icon-arrow-right"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="flicking-panel">
-                <div class="container container--image">
-                    <img src="assets/images/hero-banner-2-index-1.jpg" alt="" class="hero__banner__image hero__banner__image--1" />
-                    <img src="assets/images/hero-banner-2-index-2.jpg" alt="" class="hero__banner__image hero__banner__image--2" />
-                    <img src="assets/images/hero-banner-2-index-3.jpg" alt="" class="hero__banner__image hero__banner__image--3" />
-                    <a href="#!" alt="熱情讓科幻成為現實 佐翼科技與創造新「未來式」服務" class="hero__banner__article hero__banner__article--orange">
-                        <span class="article--label">#創建期</span>
-                        <span class="article--title">熱情讓科幻成為現實 佐翼科技與創造新「未來式」服務</span>
-                        <span class="article--company">
-                            <span>佐翼科技</span>
-                            <i class="icon icon-arrow-right"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="flicking-panel">
-                <div class="container container--image">
-                    <img src="assets/images/hero-banner-3-index-1.jpg" alt="" class="hero__banner__image hero__banner__image--1" />
-                    <img src="assets/images/hero-banner-3-index-2.jpg" alt="" class="hero__banner__image hero__banner__image--2" />
-                    <img src="assets/images/hero-banner-3-index-3.jpg" alt="" class="hero__banner__image hero__banner__image--3" />
-                    <a href="#!" alt="準確觀察俐落進場 創新服務模式領「亞勁車電」進軍國際" class="hero__banner__article hero__banner__article--yellow">
-                        <span class="article--label">#成長期</span>
-                        <span class="article--title">準確觀察俐落進場 創新服務模式領「亞勁車電」進軍國際</span>
-                        <span class="article--company"><span>亞勁車電</span><i class="icon icon-arrow-right"></i></span>
-                    </a>
-                </div>
-            </div>
-            <div class="flicking-panel">
-                <div class="container container--image">
-                    <img src="assets/images/hero-banner-3-index-1.jpg" alt="" class="hero__banner__image hero__banner__image--1" />
-                    <img src="assets/images/hero-banner-3-index-2.jpg" alt="" class="hero__banner__image hero__banner__image--2" />
-                    <img src="assets/images/hero-banner-3-index-3.jpg" alt="" class="hero__banner__image hero__banner__image--3" />
-                    <a href="#!" alt="熱情讓科幻成為現實 佐翼科技與創造新「未來式」服務" class="hero__banner__article hero__banner__article--purple">
-                        <span class="article--label">#擴張期</span>
-                        <span class="article--title">熱情讓科幻成為現實 佐翼科技與創造新「未來式」服務</span>
-                        <span class="article--company"><span>佐翼科技</span><i class="icon icon-arrow-right"></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container container--text">
         <div class="hero__banner__decoration hero__banner__decoration--left">
             <span>ADVANCE</span>
@@ -121,9 +63,10 @@
             <span>KEEP INNOVATING !</span>
             <i class="icon icon-taiwan"></i>
             <div id="hero__banner--pagination" class="hero__banner--pagination">
-                <button onclick="onChangeHeroBannerFlicking(0)" type="button" class="active"></button>
-                <button onclick="onChangeHeroBannerFlicking(1)" type="button"></button>
-                <button onclick="onChangeHeroBannerFlicking(2)" type="button"></button>
+                <button onclick="onChangeHeroFlicking(0)" type="button" class="active"></button>
+                <button onclick="onChangeHeroFlicking(1)" type="button"></button>
+                <button onclick="onChangeHeroFlicking(2)" type="button"></button>
+                <button onclick="onChangeHeroFlicking(3)" type="button"></button>
             </div>
         </div>
         <div class="hero__banner__text">
@@ -138,6 +81,93 @@
                 <span>透過共創，我們促進新創與中大型企業的緊密合作，共同開拓未來！</span>
                 <span>Keep Innovating ！</span>
             </p>
+        </div>
+        <div class="hero__banner__image">
+            <div id="slider__item__flicking--4" class="slider__item slider__item--4 flicking-viewport">
+                <div class="flicking-camera">
+                    <div class="flicking-panel">
+                        <a href="#!" alt="離開地球表面！ 臺灣低軌衛星的先導者：鐳洋科技" class="hero__banner__article hero__banner__article--blue">
+                            <span class="article--label">#種子期</span>
+                            <span class="article--title">離開地球表面！ 臺灣低軌衛星的先導者：鐳洋科技</span>
+                            <span class="article--company"><span>鐳洋科技</span><i class="icon icon-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="flicking-panel">
+                        <a href="#!" alt="熱情讓科幻成為現實 佐翼科技與創造新「未來式」服務" class="hero__banner__article hero__banner__article--orange">
+                            <span class="article--label">#創建期</span>
+                            <span class="article--title">熱情讓科幻成為現實 佐翼科技與創造新「未來式」服務</span>
+                            <span class="article--company"><span>佐翼科技</span><i class="icon icon-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="flicking-panel">
+                        <a href="#!" alt="準確觀察俐落進場 創新服務模式領「亞勁車電」進軍國際" class="hero__banner__article hero__banner__article--yellow">
+                            <span class="article--label">#成長期</span>
+                            <span class="article--title">準確觀察俐落進場 創新服務模式領「亞勁車電」進軍國際</span>
+                            <span class="article--company"><span>亞勁車電</span><i class="icon icon-arrow-right"></i></span>
+                        </a>
+                    </div>
+                    <div class="flicking-panel">
+                        <a href="#!" alt="熱情讓科幻成為現實 佐翼科技與創造新「未來式」服務" class="hero__banner__article hero__banner__article--purple">
+                            <span class="article--label">#擴張期</span>
+                            <span class="article--title">熱情讓科幻成為現實 佐翼科技與創造新「未來式」服務</span>
+                            <span class="article--company"><span>佐翼科技</span><i class="icon icon-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="slider__item__flicking--1" class="slider__item slider__item--1 flicking-viewport">
+                <div class="flicking-camera">
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-1-index-1.jpg" alt="" />
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-2-index-1.jpg" alt="" />
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-3-index-1.jpg" alt="" />
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-2-index-1.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="slider__item__flicking--2" class="slider__item slider__item--2 flicking-viewport">
+                <div class="flicking-camera">
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-1-index-2.jpg" alt="" />
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-2-index-2.jpg" alt="" />
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-3-index-2.jpg" alt="" />
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-2-index-2.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="slider__item__flicking--3" class="slider__item slider__item--3 flicking-viewport">
+                <div class="flicking-camera">
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-1-index-3.jpg" alt="" />
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-2-index-3.jpg" alt="" />
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-3-index-3.jpg" alt="" />
+                    </div>
+                    <div class="flicking-panel">
+                        <img src="assets/images/hero-banner-2-index-3.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

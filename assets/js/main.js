@@ -20,7 +20,6 @@ var countUp = /*#__PURE__*/function () {
     value: function setVars() {
       var _this = this;
 
-      console.log("aaaaaaaaaa");
       this.number = this.el.querySelectorAll("[data-countup-number]");
       this.observerOptions = {
         root: null,
@@ -125,9 +124,7 @@ function googleTranslateElementInit() {
   }, "google_translate_element");
 }
 
-function onChangeFontSize(value) {
-  console.log(value);
-}
+function onChangeFontSize(value) {}
 
 function onToggleFZSlideUp() {
   var dropdownEl = ".fontsize__dropdown";
@@ -148,23 +145,48 @@ $(document).ready(function () {
     new countUp(element);
   });
 });
-AOS.init(); // ====================
+AOS.init();
+var slider__item = document.querySelectorAll(".slider__item");
 
-var heroBannerFlicking = new Flicking("#hero__banner--flicking", {
-  circular: true,
-  renderOnlyVisible: true
-}).on("willChange", function (e) {
-  var index = e.index; // TODO: 背景替換
+var createHeroBannerFlicking = function createHeroBannerFlicking(selector) {
+  return new Flicking(selector, {
+    circular: true,
+    renderOnlyVisible: true
+  }).on("willChange", function (e) {
+    var index = e.index;
+    onChangeHeroBannerBackground(index);
+    onChangeHeroBannerFlicking(index); // TODO: 圖片 Blur-In
 
-  onChangeHeroBannerBackground(index); // TODO: Pagination 動畫
+    slider__item.forEach(function (element) {
+      element.style.filter = "blur(8px)";
+    });
+  }).on("changed", function (e) {
+    var index = e.index; // TODO: 建立圖片往上位移滾動機制
+    // TODO: 圖片 Blur-Out
 
-  onChangeHeroBannerFlicking(index); // TODO: 圖片 Blur-Out
-}).on("changed", function (e) {
-  var index = e.index; // TODO: 建立圖片往上位移滾動機制
-  // TODO: 圖片 Blur-In
+    slider__item.forEach(function (element) {
+      element.style.filter = "blur(0)";
+    });
+  });
+}; // 建立四個 Flicking 實例
 
-  console.log(document.querySelectorAll(".hero__banner__image"));
-});
+
+var selectors = ["#slider__item__flicking--1", "#slider__item__flicking--2", "#slider__item__flicking--3", "#slider__item__flicking--4"];
+var heroBannerFlickings = selectors.map(createHeroBannerFlicking); // 加入 Sync 插件（假設第一個為主控）
+
+heroBannerFlickings[0].addPlugins(new Flicking.Plugins.Sync({
+  type: "camera",
+  synchronizedFlickingOptions: heroBannerFlickings.map(function (flicking) {
+    return {
+      flicking: flicking,
+      isClickable: false
+    };
+  })
+}));
+heroBannerFlickings[0].addPlugins(new Flicking.Plugins.AutoPlay({
+  duration: 5000
+}));
+heroBannerFlickings[0].addPlugins(new Flicking.Plugins.Fade());
 
 var onChangeHeroBannerBackground = function onChangeHeroBannerBackground(index) {
   switch (index) {
@@ -189,11 +211,18 @@ var onChangeHeroBannerBackground = function onChangeHeroBannerBackground(index) 
   }
 };
 
-var onChangeHeroBannerFlicking = function onChangeHeroBannerFlicking(index) {
-  console.log(index);
-}; // heroBannerFlicking.addPlugins(new Flicking.Plugins.AutoPlay({ duration: 5000 }));
-// heroBannerFlicking.addPlugins(new Flicking.Plugins.Fade());
+var pagination = document.querySelectorAll('.hero__banner--pagination button');
 
+var onChangeHeroBannerFlicking = function onChangeHeroBannerFlicking(index) {
+  pagination.forEach(function (element) {
+    element.classList.remove('active');
+  });
+  pagination[index].classList.add('active');
+};
+
+var onChangeHeroFlicking = function onChangeHeroFlicking(index) {
+  heroBannerFlickings[0].moveTo(index);
+};
 
 var flickingOptions = {
   circular: true,
