@@ -12,9 +12,9 @@ const paddingBottom = 444;
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / (window.innerHeight + paddingBottom), 0.1, 100);
 
 // 初始顏色
-let color1 = new THREE.Color("#0E8A89");
-let color2 = new THREE.Color("#27B4B9");
-let color3 = new THREE.Color("#D8EFEE");
+let color1 = new THREE.Color("#27B4B9");
+let color2 = new THREE.Color("#D8EFEE");
+let color3 = new THREE.Color("#0E8A89");
 
 // 顏色過渡變數
 let targetColor1 = color1.clone();
@@ -26,9 +26,9 @@ let transitionDuration = 1;
 let transitionStartTime = null;
 
 const params = {
-    color1: "#0E8A89",
-    color2: "#27B4B9",
-    color3: "#D8EFEE",
+    color1: "#27B4B9",
+    color2: "#D8EFEE",
+    color3: "#0E8A89",
     uStrength: 3.4,
     uSpeed: 0.25,
     uDensity: 1.2,
@@ -173,30 +173,30 @@ function updateColors(t) {
 
 // 顏色切換函數
 function switchToColorSet1() {
-    targetColor1 = new THREE.Color("#0E8A89");
-    targetColor2 = new THREE.Color("#27B4B9");
-    targetColor3 = new THREE.Color("#D8EFEE");
+    targetColor1 = new THREE.Color("#27B4B9");
+    targetColor2 = new THREE.Color("#D8EFEE");
+    targetColor3 = new THREE.Color("#0E8A89");
     transitionStartTime = null; // 重置過渡時間
 }
 
 function switchToColorSet2() {
-    targetColor1 = new THREE.Color("#ED7012");
-    targetColor2 = new THREE.Color("#F3A460");
-    targetColor3 = new THREE.Color("#FADAB2");
+    targetColor1 = new THREE.Color("#F3A460");
+    targetColor2 = new THREE.Color("#FDEED8");
+    targetColor3 = new THREE.Color("#ED7012");
     transitionStartTime = null; // 重置過渡時間
 }
 
 function switchToColorSet3() {
-    targetColor1 = new THREE.Color("#F8B300");
-    targetColor2 = new THREE.Color("#FFE029");
-    targetColor3 = new THREE.Color("#FEFDC7");
+    targetColor1 = new THREE.Color("#FFE029");
+    targetColor2 = new THREE.Color("#FFFBEB");
+    targetColor3 = new THREE.Color("#F8B300");
     transitionStartTime = null; // 重置過渡時間
 }
 
 function switchToColorSet4() {
-    targetColor1 = new THREE.Color("#5F63C3");
-    targetColor2 = new THREE.Color("#A1A3DE");
-    targetColor3 = new THREE.Color("#DFDFF2");
+    targetColor1 = new THREE.Color("#A1A3DE");
+    targetColor2 = new THREE.Color("#FBFBFB");
+    targetColor3 = new THREE.Color("#5F63C3");
     transitionStartTime = null; // 重置過渡時間
 }
 

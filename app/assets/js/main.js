@@ -10,7 +10,6 @@ function googleTranslateElementInit() {
 }
 
 function onChangeFontSize(value) {
-    console.log(value);
 }
 function onToggleFZSlideUp() {
     const dropdownEl = ".fontsize__dropdown";
@@ -32,25 +31,53 @@ $(document).ready(() => {
 
 AOS.init();
 
-// ====================
-const heroBannerFlicking = new Flicking("#hero__banner--flicking", {
-    circular: true,
-    renderOnlyVisible: true,
-})
-    .on("willChange", function (e) {
-        const index = e.index;
-        // TODO: 背景替換
-        onChangeHeroBannerBackground(index);
-        // TODO: Pagination 動畫
-        onChangeHeroBannerFlicking(index);
-        // TODO: 圖片 Blur-Out
+const slider__item = document.querySelectorAll(".slider__item")
+const createHeroBannerFlicking = (selector) => {
+    return new Flicking(selector, {
+        circular: true,
+        renderOnlyVisible: true,
     })
-    .on("changed", function (e) {
-        const index = e.index;
-        // TODO: 建立圖片往上位移滾動機制
-        // TODO: 圖片 Blur-In
-        console.log(document.querySelectorAll(".hero__banner__image"));
-    });
+        .on("willChange", function (e) {
+            const index = e.index;
+            onChangeHeroBannerBackground(index);
+            onChangeHeroBannerFlicking(index);
+            // TODO: 圖片 Blur-In
+            slider__item.forEach(element => {
+                element.style.filter = "blur(8px)"
+            });
+        })
+        .on("changed", function (e) {
+            const index = e.index;
+            // TODO: 建立圖片往上位移滾動機制
+            // TODO: 圖片 Blur-Out
+            slider__item.forEach(element => {
+                element.style.filter = "blur(0)"
+            });
+        });
+}
+
+// 建立四個 Flicking 實例
+const selectors = [
+    "#slider__item__flicking--1",
+    "#slider__item__flicking--2",
+    "#slider__item__flicking--3",
+    "#slider__item__flicking--4"
+];
+
+const heroBannerFlickings = selectors.map(createHeroBannerFlicking);
+
+// 加入 Sync 插件（假設第一個為主控）
+heroBannerFlickings[0].addPlugins(
+    new Flicking.Plugins.Sync({
+        type: "camera",
+        synchronizedFlickingOptions: heroBannerFlickings.map(flicking => ({
+            flicking,
+            isClickable: false
+        }))
+    })
+);
+heroBannerFlickings[0].addPlugins(new Flicking.Plugins.AutoPlay({ duration: 5000 }));
+heroBannerFlickings[0].addPlugins(new Flicking.Plugins.Fade());
 
 const onChangeHeroBannerBackground = (index) => {
     switch (index) {
@@ -71,12 +98,17 @@ const onChangeHeroBannerBackground = (index) => {
     }
 };
 
+const pagination = document.querySelectorAll('.hero__banner--pagination button')
 const onChangeHeroBannerFlicking = (index) => {
-    console.log(index);
+    pagination.forEach(element => {
+        element.classList.remove('active')
+    });
+    pagination[index].classList.add('active')
 };
 
-// heroBannerFlicking.addPlugins(new Flicking.Plugins.AutoPlay({ duration: 5000 }));
-// heroBannerFlicking.addPlugins(new Flicking.Plugins.Fade());
+const onChangeHeroFlicking = (index) => {
+    heroBannerFlickings[0].moveTo(index)
+};
 
 const flickingOptions = {
     circular: true,

@@ -6,8 +6,6 @@ class countUp {
     }
 
     setVars() {
-        console.log("aaaaaaaaaa");
-
         this.number = this.el.querySelectorAll("[data-countup-number]");
         this.observerOptions = { root: null, rootMargin: "0px 0px", threshold: 0 };
         this.observer = new IntersectionObserver((entries) => {
