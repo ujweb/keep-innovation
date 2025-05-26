@@ -3336,6 +3336,20 @@ article {
       .article-content .article-image-group span {
         width: calc(100% - 1.5625rem - var(--image-width)); } }
 
+.article-content .article-video {
+  position: relative;
+  width: 100%; }
+  .article-content .article-video::before {
+    display: block;
+    padding-top: calc(9 / 16 * 100%);
+    content: ""; }
+  .article-content .article-video > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 .article-further-reading {
   margin-top: 1.875rem; }
   @media (min-width: 768px) {
