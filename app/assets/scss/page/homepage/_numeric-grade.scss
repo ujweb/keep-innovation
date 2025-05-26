@@ -9,6 +9,9 @@
 
     .container {
         @include media-breakpoint-up(lg) {
+            max-width: 95vw;
+        }
+        @include media-breakpoint-up(xxl) {
             max-width: 71rem;
         }
     }
