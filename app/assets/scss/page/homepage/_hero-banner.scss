@@ -6,7 +6,9 @@
     margin-bottom: -23.625rem;
     overflow: hidden;
     z-index: 0;
-
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 30.625rem;
+    }
     &::before,
     &::after {
         @include clear;
@@ -454,7 +456,7 @@
             display: flex;
             align-items: center;
             gap: 0.125rem;
-            font-size: .875rem;
+            font-size: 0.875rem;
             letter-spacing: 0.15em;
             line-height: 1;
             @include media-breakpoint-up(lg) {
@@ -467,7 +469,7 @@
                 width: 1.5rem;
                 height: 1.5rem;
                 padding-left: 0.35rem;
-                margin-left: .375rem;
+                margin-left: 0.375rem;
                 font-size: 0.875rem;
                 border-radius: 50%;
                 @include media-breakpoint-up(lg) {
