@@ -2066,6 +2066,9 @@ main {
   margin-bottom: -23.625rem;
   overflow: hidden;
   z-index: 0; }
+  @media (min-width: 992px) {
+    .hero__banner {
+      padding-bottom: 30.625rem; } }
   .hero__banner::before, .hero__banner::after {
     content: "";
     display: table;
@@ -2538,7 +2541,7 @@ main {
           -ms-flex-align: center;
               align-items: center;
       gap: 0.125rem;
-      font-size: .875rem;
+      font-size: 0.875rem;
       letter-spacing: 0.15em;
       line-height: 1; }
       @media (min-width: 992px) {
@@ -2554,7 +2557,7 @@ main {
         width: 1.5rem;
         height: 1.5rem;
         padding-left: 0.35rem;
-        margin-left: .375rem;
+        margin-left: 0.375rem;
         font-size: 0.875rem;
         border-radius: 50%; }
         @media (min-width: 992px) {
