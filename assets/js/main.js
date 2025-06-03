@@ -124,7 +124,13 @@ function googleTranslateElementInit() {
   }, "google_translate_element");
 }
 
-function onChangeFontSize(value) {}
+function onChangeFontSize(value) {
+  var list = ["sm", "md", "lg"];
+  list.forEach(function (element) {
+    document.body.classList.remove("fontsize--".concat(element));
+  });
+  document.body.classList.add("fontsize--".concat(value));
+}
 
 function onToggleFZSlideUp() {
   var dropdownEl = ".fontsize__dropdown";
@@ -145,101 +151,14 @@ $(document).ready(function () {
     new countUp(element);
   });
 });
-AOS.init();
-var slider__item = document.querySelectorAll(".slider__item");
+document.querySelectorAll(".img__container img").forEach(function (el) {
+  var container = el.parentElement;
+  var width = el.offsetWidth;
 
-var createHeroBannerFlicking = function createHeroBannerFlicking(selector) {
-  return new Flicking(selector, {
-    circular: true,
-    renderOnlyVisible: true
-  }).on("willChange", function (e) {
-    var index = e.index;
-    onChangeHeroBannerBackground(index);
-    onChangeHeroBannerFlicking(index); // TODO: 圖片 Blur-In
-
-    slider__item.forEach(function (element) {
-      element.style.filter = "blur(8px)";
-    });
-  }).on("changed", function (e) {
-    var index = e.index; // TODO: 建立圖片往上位移滾動機制
-    // TODO: 圖片 Blur-Out
-
-    slider__item.forEach(function (element) {
-      element.style.filter = "blur(0)";
-    });
-  });
-}; // 建立四個 Flicking 實例
-
-
-var selectors = ["#slider__item__flicking--1", "#slider__item__flicking--2", "#slider__item__flicking--3", "#slider__item__flicking--4"];
-var heroBannerFlickings = selectors.map(createHeroBannerFlicking); // 加入 Sync 插件（假設第一個為主控）
-
-heroBannerFlickings[0].addPlugins(new Flicking.Plugins.Sync({
-  type: "camera",
-  synchronizedFlickingOptions: heroBannerFlickings.map(function (flicking) {
-    return {
-      flicking: flicking,
-      isClickable: false
-    };
-  })
-}));
-heroBannerFlickings[0].addPlugins(new Flicking.Plugins.AutoPlay({
-  duration: 5000
-}));
-heroBannerFlickings[0].addPlugins(new Flicking.Plugins.Fade());
-
-var onChangeHeroBannerBackground = function onChangeHeroBannerBackground(index) {
-  switch (index) {
-    case 0:
-      switchToColorSet1();
-      break;
-
-    case 1:
-      switchToColorSet2();
-      break;
-
-    case 2:
-      switchToColorSet3();
-      break;
-
-    case 3:
-      switchToColorSet4();
-      break;
-
-    default:
-      break;
+  if (width < 144) {
+    container.classList.add("img__container--lg");
+  } else {
+    container.classList.remove("img__container--lg");
   }
-};
-
-var pagination = document.querySelectorAll('.hero__banner--pagination button');
-
-var onChangeHeroBannerFlicking = function onChangeHeroBannerFlicking(index) {
-  pagination.forEach(function (element) {
-    element.classList.remove('active');
-  });
-  pagination[index].classList.add('active');
-};
-
-var onChangeHeroFlicking = function onChangeHeroFlicking(index) {
-  heroBannerFlickings[0].moveTo(index);
-};
-
-var flickingOptions = {
-  circular: true,
-  bound: true,
-  panelsPerView: 1,
-  align: "center",
-  moveType: "strict",
-  renderOnlyVisible: true
-};
-document.querySelectorAll(".item__slider--flicking").forEach(function (el) {
-  var flicking = new Flicking(el, flickingOptions);
-  var arrowPlugin = new Flicking.Plugins.Arrow({
-    parentEl: el,
-    // 指向每個自己的容器
-    prevElSelector: ".flicking-arrow-prev",
-    nextElSelector: ".flicking-arrow-next"
-  });
-  flicking.addPlugins(arrowPlugin);
 });
 //# sourceMappingURL=main.js.map
