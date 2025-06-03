@@ -155,7 +155,7 @@ document.querySelectorAll(".img__container img").forEach(function (el) {
   var container = el.parentElement;
   var width = el.offsetWidth;
 
-  if (width < 144) {
+  if (width < 100) {
     container.classList.add("img__container--lg");
   } else {
     container.classList.remove("img__container--lg");
