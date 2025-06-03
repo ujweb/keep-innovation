@@ -10,6 +10,14 @@
         }
     }
 
+    .img__container--lg {
+        img {
+            height: 4.25rem;
+            @include media-breakpoint-up(md) {
+                height: 5rem;
+            }
+        }
+    }
     img {
         display: block;
         height: 2.25rem;
@@ -22,14 +30,14 @@
     h1 {
         margin: 0;
         color: $secondary;
-        font-size: 2rem;
+        font-size: calc(2rem + var(--bracket));
         font-weight: 500;
         line-height: 1.4;
         letter-spacing: 0.01em;
         text-transform: uppercase;
         white-space: pre-line;
         @include media-breakpoint-up(md) {
-            font-size: 2.5rem;
+            font-size: calc(2.5rem + var(--bracket));
         }
     }
 }

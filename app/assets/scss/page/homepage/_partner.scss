@@ -15,7 +15,7 @@
     h3 {
         margin-top: 0;
         margin-bottom: 1.25rem;
-        font-size: 1rem;
+        size: calc(1rem + var(--bracket));
         font-weight: normal;
         line-height: 1;
     }

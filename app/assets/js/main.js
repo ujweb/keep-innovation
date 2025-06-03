@@ -10,6 +10,11 @@ function googleTranslateElementInit() {
 }
 
 function onChangeFontSize(value) {
+    const list = ["sm", "md", "lg"];
+    list.forEach((element) => {
+        document.body.classList.remove(`fontsize--${element}`);
+    });
+    document.body.classList.add(`fontsize--${value}`);
 }
 function onToggleFZSlideUp() {
     const dropdownEl = ".fontsize__dropdown";

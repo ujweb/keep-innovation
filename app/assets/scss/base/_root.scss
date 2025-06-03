@@ -10,8 +10,19 @@ body {
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
+    --bracket: 0rem;
+
     &.opened {
         overflow: hidden;
+    }
+    &.fontsize--sm {
+        --bracket: 0rem;
+    }
+    &.fontsize--md {
+        --bracket: .125rem;
+    }
+    &.fontsize--lg {
+        --bracket: .25rem;
     }
 }
 

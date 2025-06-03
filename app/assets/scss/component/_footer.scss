@@ -9,7 +9,7 @@ footer {
     .row {
         display: grid;
         gap: 0.625rem;
-        font-size: 0.875rem;
+        font-size: calc(0.875rem + var(--bracket));
 
         @include media-breakpoint-down(md) {
             padding-left: 0.5rem;

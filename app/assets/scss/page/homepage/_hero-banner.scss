@@ -357,31 +357,31 @@
             align-items: center;
             gap: 0.1375em;
             margin: 0 -1em 0 0;
-            font-size: calc((100vw - 2rem) / 17.25);
+            font-size: calc(((100vw - 2rem) / 17.25) + var(--bracket));
             font-weight: normal;
             line-height: 1;
             letter-spacing: 0.15em;
             @include media-breakpoint-up(sm) {
-                font-size: calc(31.75rem / 16.75);
+                font-size: calc((31.75rem / 16.75) + var(--bracket));
             }
             @include media-breakpoint-up(lg) {
-                font-size: 2rem;
-                letter-spacing: 0.3em;
+                font-size: calc(2rem + var(--bracket));
+                letter-spacing: calc(0.3em - (var(--bracket) * 1.5));
             }
 
             i.icon {
-                font-size: 1rem;
+                font-size: calc(1rem + var(--bracket));
                 @include media-breakpoint-up(lg) {
-                    font-size: 1.25rem;
+                    font-size: calc(1.25rem + var(--bracket));
                 }
             }
         }
         p {
             margin: 0;
-            font-size: 1rem;
+            font-size: calc(1rem + var(--bracket));
             line-height: 1.7;
             @include media-breakpoint-up(sm) {
-                font-size: 1.125rem;
+                font-size: calc(1.125rem + var(--bracket));
             }
             span {
                 display: inline-block;
@@ -436,41 +436,41 @@
         }
 
         .article--label {
-            font-size: 1rem;
+            font-size: calc(1rem + var(--bracket));
             letter-spacing: 0.15em;
             line-height: 1;
             @include media-breakpoint-up(lg) {
-                font-size: 1.25rem;
+                font-size: calc(1.25rem + var(--bracket));
             }
         }
         .article--title {
-            font-size: 1.125rem;
+            font-size: calc(1.125rem + var(--bracket));
             font-weight: 500;
             letter-spacing: 0.05em;
             line-height: 1.3;
             @include media-breakpoint-up(lg) {
-                font-size: 1.375rem;
+                font-size: calc(1.375rem + var(--bracket));
             }
         }
         .article--company {
             display: flex;
             align-items: center;
             gap: 0.125rem;
-            font-size: 0.875rem;
+            font-size: calc(0.875rem + var(--bracket));
             letter-spacing: 0.15em;
             line-height: 1;
             @include media-breakpoint-up(lg) {
-                font-size: 1.125rem;
+                font-size: calc(1.125rem + var(--bracket));
             }
 
             .icon-arrow-right {
                 display: flex;
                 align-items: center;
-                width: 1.5rem;
-                height: 1.5rem;
+                width: calc(1.5rem + var(--bracket));
+                height: calc(1.5rem + var(--bracket));
                 padding-left: 0.35rem;
                 margin-left: 0.375rem;
-                font-size: 0.875rem;
+                font-size: calc(0.875rem + var(--bracket));
                 border-radius: 50%;
                 @include media-breakpoint-up(lg) {
                     margin-left: auto;
@@ -506,7 +506,7 @@
                 padding-top: 3.5rem;
                 margin-bottom: 1rem;
                 span {
-                    font-size: 0.875rem;
+                    font-size: calc(0.875rem + var(--bracket));
                 }
             }
         }
@@ -518,29 +518,29 @@
             @include media-breakpoint-down(lg) {
                 margin-top: 1rem;
                 span {
-                    font-size: 0.75rem;
+                    font-size: calc(0.75rem + var(--bracket));
                 }
             }
         }
         span {
             line-height: 1.7;
             @include media-breakpoint-up(lg) {
-                font-size: 1.5rem;
+                font-size: calc(1.5rem + var(--bracket));
                 writing-mode: tb-rl;
                 transform: scale(-1);
             }
         }
         i.icon {
-            font-size: 3.375rem;
+            font-size: calc(3.375rem + var(--bracket));
             &.icon-caret-up-group {
                 @include media-breakpoint-down(lg) {
-                    font-size: 1.75rem;
+                    font-size: calc(1.75rem + var(--bracket));
                     writing-mode: sideways-rl;
                 }
             }
             &.icon-taiwan {
                 @include media-breakpoint-down(lg) {
-                    font-size: 0.875rem;
+                    font-size: calc(0.875rem + var(--bracket));
                 }
             }
         }

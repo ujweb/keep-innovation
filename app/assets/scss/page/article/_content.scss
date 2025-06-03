@@ -18,7 +18,7 @@
 
         > h2 {
             color: $secondary;
-            font-size: 1.625rem;
+            font-size: calc(1.625rem + var(--bracket));
             font-weight: 500;
             line-height: 1.4;
             text-align: center;
@@ -28,7 +28,7 @@
             }
         }
         > p {
-            font-size: 1.125rem;
+            font-size: calc(1.125rem + var(--bracket));
             line-height: 1.7;
         }
         > blockquote {
@@ -38,7 +38,7 @@
             margin-left: 1.25rem;
             margin-right: 1.25rem;
             font-family: "Noto Serif TC", serif;
-            font-size: 1.25rem;
+            font-size: calc(1.25rem + var(--bracket));
             line-height: 1.7;
             letter-spacing: 0.015em;
             text-align: center;
@@ -93,7 +93,7 @@
         }
         span {
             color: $gray-400;
-            font-size: 0.9375rem;
+            font-size: calc(0.9375rem + var(--bracket));
             line-height: 1.5;
             letter-spacing: 0.02em;
             @include media-breakpoint-up(md) {
@@ -104,7 +104,7 @@
     .article-video {
         position: relative;
         width: 100%;
-        
+
         &::before {
             display: block;
             padding-top: calc(9 / 16 * 100%);

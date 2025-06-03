@@ -16,10 +16,12 @@
     }
 
     .article-publish-date {
+        font-size: calc(1rem + var(--bracket));
         text-align: left;
     }
 
     .article-viewer {
+        font-size: calc(1rem + var(--bracket));
         text-align: right;
     }
 }
