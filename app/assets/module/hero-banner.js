@@ -206,7 +206,13 @@ window.switchToColorSet3 = switchToColorSet3;
 window.switchToColorSet4 = switchToColorSet4;
 
 // 動畫更新函數
+let hasFadedIn = false;
 function animate(t) {
+    if (!hasFadedIn) {
+        document.getElementById("shaderCanvas").style.opacity = "1";
+        hasFadedIn = true;
+    }
+
     updateColors(t); // 更新顏色過渡
     uniforms.u_time.value = t * 0.001;
     renderer.setSize(window.innerWidth, window.innerHeight + paddingBottom);
