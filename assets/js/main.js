@@ -130,17 +130,15 @@ function onChangeFontSize(value) {
     document.body.classList.remove("fontsize--".concat(element));
   });
   document.body.classList.add("fontsize--".concat(value));
-}
+} // function onToggleFZSlideUp() {
+//     const dropdownEl = ".fontsize__dropdown";
+//     $(dropdownEl).slideUp();
+// }
+// function onToggleFZSlideDown() {
+//     const dropdownEl = ".fontsize__dropdown";
+//     $(dropdownEl).slideDown();
+// }
 
-function onToggleFZSlideUp() {
-  var dropdownEl = ".fontsize__dropdown";
-  $(dropdownEl).slideUp();
-}
-
-function onToggleFZSlideDown() {
-  var dropdownEl = ".fontsize__dropdown";
-  $(dropdownEl).slideDown();
-}
 
 $(document).ready(function () {
   googleTranslateElementInit();
