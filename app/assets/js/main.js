@@ -16,14 +16,6 @@ function onChangeFontSize(value) {
     });
     document.body.classList.add(`fontsize--${value}`);
 }
-// function onToggleFZSlideUp() {
-//     const dropdownEl = ".fontsize__dropdown";
-//     $(dropdownEl).slideUp();
-// }
-// function onToggleFZSlideDown() {
-//     const dropdownEl = ".fontsize__dropdown";
-//     $(dropdownEl).slideDown();
-// }
 
 $(document).ready(() => {
     googleTranslateElementInit();
