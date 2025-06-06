@@ -43,8 +43,8 @@ heroBannerFlickings[0].addPlugins(
         }))
     })
 );
-heroBannerFlickings[0].addPlugins(new Flicking.Plugins.AutoPlay({ duration: 5000 }));
-heroBannerFlickings[0].addPlugins(new Flicking.Plugins.Fade());
+// heroBannerFlickings[0].addPlugins(new Flicking.Plugins.AutoPlay({ duration: 5000 }));
+// heroBannerFlickings[0].addPlugins(new Flicking.Plugins.Fade());
 
 const onChangeHeroBannerBackground = (index) => {
     switch (index) {

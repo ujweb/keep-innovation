@@ -2088,14 +2088,17 @@ main {
 .hero__banner {
   position: relative;
   width: 100vw;
-  padding-bottom: 23.625rem;
-  margin-bottom: -23.625rem;
-  background-color: #27B4B9;
+  background-color: #27b4b9;
   overflow: hidden;
   z-index: 0; }
   @media (min-width: 992px) {
     .hero__banner {
-      padding-bottom: 30.625rem; } }
+      padding-bottom: 23.625rem;
+      margin-bottom: -23.625rem; } }
+  @media (max-width: 991.98px) {
+    .hero__banner {
+      height: 120vh;
+      margin-bottom: -20vh; } }
   .hero__banner::before, .hero__banner::after {
     content: "";
     display: table;
@@ -2272,19 +2275,6 @@ main {
       @media (min-width: 992px) {
         .hero__banner--pagination button.active {
           height: 10rem; } }
-      .hero__banner--pagination button.active::before {
-        -webkit-transform: translateX(-100%);
-            -ms-transform: translateX(-100%);
-                transform: translateX(-100%);
-        -webkit-animation: paginationHor 5s forwards alternate linear;
-                animation: paginationHor 5s forwards alternate linear; }
-        @media (min-width: 992px) {
-          .hero__banner--pagination button.active::before {
-            -webkit-transform: translateY(-100%);
-                -ms-transform: translateY(-100%);
-                    transform: translateY(-100%);
-            -webkit-animation: paginationVer 5s forwards alternate linear;
-                    animation: paginationVer 5s forwards alternate linear; } }
   .hero__banner__image {
     position: relative;
     display: -webkit-box;
@@ -2447,6 +2437,7 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 1rem;
+    width: 100%;
     max-width: 38.125rem;
     color: #1d4843;
     pointer-events: initial;
@@ -2510,7 +2501,7 @@ main {
         .hero__banner__text p {
           font-size: calc(1.125rem + var(--bracket)); } }
       .hero__banner__text p span {
-        display: inline-block; }
+        display: block; }
   .hero__banner__article {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2803,7 +2794,8 @@ main {
   @media (min-width: 992px) {
     .categories__list {
       gap: 4.375rem;
-      padding-top: 0;
+      padding-top: 10.75rem;
+      padding-bottom: 5rem;
       margin-bottom: 5rem; } }
   .categories__list .container {
     max-width: 60.125rem; }
@@ -2931,13 +2923,10 @@ main {
     gap: 1.5rem; }
     @media (min-width: 768px) {
       .categories__list .flicking-panel .panel__group {
+        grid-template-columns: 458fr 366fr;
         gap: 2.5rem;
         padding-left: 2rem;
-        padding-right: 2rem; }
-        .categories__list .category__item:nth-child(odd) .flicking-panel .panel__group {
-          grid-template-columns: 458fr 366fr; }
-        .categories__list .category__item:nth-child(even) .flicking-panel .panel__group {
-          grid-template-columns: 366fr 458fr; } }
+        padding-right: 2rem; } }
   .categories__list .flicking-panel .panel--image {
     padding: 0 1rem;
     -webkit-box-ordinal-group: 2;
@@ -2945,11 +2934,10 @@ main {
             order: 1; }
     @media (min-width: 768px) {
       .categories__list .flicking-panel .panel--image {
-        padding: 1.25rem; }
-        .categories__list .category__item:nth-child(odd) .flicking-panel .panel--image {
-          -webkit-box-ordinal-group: 0;
-              -ms-flex-order: -1;
-                  order: -1; } }
+        padding: 1.25rem;
+        -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+                order: -1; } }
   .categories__list .flicking-panel img {
     width: 100%;
     aspect-ratio: 343/240;
@@ -2977,9 +2965,7 @@ main {
     @media (min-width: 768px) {
       .categories__list .flicking-panel .panel--text {
         gap: 1.25rem;
-        padding: 1.25rem 1.25rem 1.25rem 0.625rem; }
-        .categories__list .category__item:nth-child(even) .flicking-panel .panel--text {
-          padding: 1.25rem 0.625rem 1.25rem 1.25rem; } }
+        padding: 1.25rem 1.25rem 1.25rem 0.625rem; } }
     @media (max-width: 767.98px) {
       .categories__list .flicking-panel .panel--text {
         -webkit-box-align: center;
