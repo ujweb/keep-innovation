@@ -85,14 +85,15 @@
                 <div class="flicking-camera">
                     <div class="flicking-panel">
                         <a
-                            href="article/rapidtek.html"
-                            alt="離開地球表面！ 臺灣低軌衛星的先導者：鐳洋科技"
+                            id="articleLink"
+                            href=""
+                            alt=""
                             class="hero__banner__article hero__banner__article--blue"
                         >
-                            <span class="article--label">#種子期</span>
-                            <span class="article--title">離開地球表面！ 臺灣低軌衛星的先導者：鐳洋科技</span>
+                            <spa id="articleLabel" class="article--label"></spa>
+                            <span id="articleTitle" class="article--title"></span>
                             <span class="article--company"
-                                ><span>鐳洋科技</span><i class="icon icon-arrow-right"></i>
+                                ><span id="articleCompany"></span><i class="icon icon-arrow-right"></i>
                             </span>
                         </a>
                     </div>
@@ -102,7 +103,7 @@
             <div id="slider__item__flicking--1" class="slider__item slider__item--1 flicking-viewport">
                 <div class="flicking-camera">
                     <div class="flicking-panel">
-                        <img src="assets/images/hero-banner-1-index-1.jpg" alt="" />
+                        <img id="articleImg1" src="" alt="" />
                     </div>
                 </div>
             </div>
@@ -110,7 +111,7 @@
             <div id="slider__item__flicking--2" class="slider__item slider__item--2 flicking-viewport">
                 <div class="flicking-camera">
                     <div class="flicking-panel">
-                        <img src="assets/images/hero-banner-1-index-2.jpg" alt="" />
+                        <img id="articleImg2" src="" alt="" />
                     </div>
                 </div>
             </div>
@@ -118,7 +119,7 @@
             <div id="slider__item__flicking--3" class="slider__item slider__item--3 flicking-viewport">
                 <div class="flicking-camera">
                     <div class="flicking-panel">
-                        <img src="assets/images/hero-banner-1-index-3.jpg" alt="" />
+                        <img id="articleImg3" src="" alt="" />
                     </div>
                 </div>
             </div>
@@ -297,16 +298,6 @@
             </li>
         </ul>
     </div>
-    <div class="container partner__item">
-        <h3>企業夥伴</h3>
-        <ul>
-            <li>
-                <a href="https://www.ennoconn.com/tw/" target="_blank" rel="noopener noreferrer"
-                    ><img src="assets/images/logo-ennoconn.svg" alt="樺漢科技 logo"
-                /></a>
-            </li>
-        </ul>
-    </div>
 </section>
 
         </main>
@@ -325,8 +316,8 @@
                 <div class="unit__item">
                     <div class="item__title">執行單位｜</div>
                     <div class="item__image">
-                        <img src="assets/images/logo-nasme.svg" alt="中華民國全國中小企業總會" class="item__image--nasme" />
                         <img src="assets/images/logo-niea.png" alt="全國創新創業總會" class="item__image--niea" />
+                        <img src="assets/images/logo-nasme.svg" alt="中華民國全國中小企業總會" class="item__image--nasme" />
                     </div>
                 </div>
             </div>
@@ -351,6 +342,7 @@
 
         <script type="module" src="assets/module/hero-banner.js"></script>
 <script src="assets/module/flicking.js"></script>
+<script src="assets/module/random-slider.js"></script>
 
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script>

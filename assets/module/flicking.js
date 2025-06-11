@@ -31,18 +31,18 @@ const selectors = [
     "#slider__item__flicking--4"
 ];
 
-const heroBannerFlickings = selectors.map(createHeroBannerFlicking);
+// const heroBannerFlickings = selectors.map(createHeroBannerFlicking);
 
 // 加入 Sync 插件（假設第一個為主控）
-heroBannerFlickings[0].addPlugins(
-    new Flicking.Plugins.Sync({
-        type: "camera",
-        synchronizedFlickingOptions: heroBannerFlickings.map(flicking => ({
-            flicking,
-            isClickable: false
-        }))
-    })
-);
+// heroBannerFlickings[0].addPlugins(
+//     new Flicking.Plugins.Sync({
+//         type: "camera",
+//         synchronizedFlickingOptions: heroBannerFlickings.map(flicking => ({
+//             flicking,
+//             isClickable: false
+//         }))
+//     })
+// );
 // heroBannerFlickings[0].addPlugins(new Flicking.Plugins.AutoPlay({ duration: 5000 }));
 // heroBannerFlickings[0].addPlugins(new Flicking.Plugins.Fade());
 

@@ -2155,6 +2155,7 @@ main {
     -o-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease; }
   .hero__banner .container--text {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2162,7 +2163,8 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 6.25rem; }
+    padding-top: 6.25rem;
+    z-index: 1; }
     @media (min-width: 992px) {
       .hero__banner .container--text {
         -webkit-box-orient: horizontal;
