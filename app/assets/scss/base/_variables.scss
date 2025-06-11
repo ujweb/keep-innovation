@@ -88,6 +88,7 @@ $secondary: #1d4843 !default;
 $secondary-light: #58c0bf !default;
 $secondary-dark: #018b8b !default;
 $secondary-lighter: #b3d2d0 !default;
+$secondary-gradient: linear-gradient(45deg, $secondary-light 0%, $secondary-dark 100%);
 
 // 無彩色色碼
 $white: #ffffff !default;
