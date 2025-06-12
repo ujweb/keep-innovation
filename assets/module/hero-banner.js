@@ -208,8 +208,19 @@ window.switchToColorSet4 = switchToColorSet4;
 // 動畫更新函數
 let hasFadedIn = false;
 function animate(t) {
+    const heroBannerDeco = document.querySelectorAll(".hero__banner__decoration");
+    const heroBannerArticle = document.querySelectorAll(".hero__banner__article");
     if (!hasFadedIn) {
         document.getElementById("shaderCanvas").style.opacity = "1";
+        document.querySelector(".hero__banner__text").style.color = "#1d4843";
+        for (let index = 0; index < heroBannerDeco.length; index++) {
+            const element = heroBannerDeco[index];
+            element.style.opacity = "0.7";
+        }
+        for (let index = 0; index < heroBannerArticle.length; index++) {
+            const element = heroBannerArticle[index];
+            element.style.color = "#1d4843";
+        }
         hasFadedIn = true;
     }
 
