@@ -259,6 +259,7 @@
                 order: 1;
             }
             img {
+                aspect-ratio: 65/49;
                 @include media-breakpoint-up(lg) {
                     width: 20.3125rem;
                 }
@@ -280,6 +281,7 @@
                 order: 2;
             }
             img {
+                aspect-ratio: 14/17;
                 @include media-breakpoint-up(lg) {
                     width: 17.5rem;
                 }
@@ -299,6 +301,7 @@
                 order: 4;
             }
             img {
+                aspect-ratio: 77/53;
                 @include media-breakpoint-up(lg) {
                     width: 24.0625rem;
                 }
@@ -322,6 +325,7 @@
 
         img {
             display: block;
+            object-fit: cover;
             pointer-events: none;
         }
     }
@@ -480,9 +484,15 @@
                 margin-left: 0.375rem;
                 font-size: calc(0.875rem + var(--bracket));
                 border-radius: 50%;
+                transition: transform 0.3s;
                 @include media-breakpoint-up(lg) {
                     margin-left: auto;
                 }
+            }
+        }
+        &:hover {
+            i.icon-arrow-right {
+                transform: translateX(0.5rem);
             }
         }
     }
