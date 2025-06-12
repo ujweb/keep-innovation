@@ -1562,8 +1562,7 @@ button {
   position: absolute;
   left: 0;
   top: 0;
-  color: transparent;
-  opacity: 0; }
+  color: transparent; }
 
 .flicking-viewport {
   position: relative;
