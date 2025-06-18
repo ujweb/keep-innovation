@@ -190,11 +190,11 @@
         --article-slider-width: calc(100vw - 25rem + 14.123125rem);
 
         @include media-breakpoint-up(sm) {
-            --article-slider-width: calc(540px - 25rem);
+            --article-slider-width: calc(33.75rem - 25rem);
             margin-right: 0;
         }
         @include media-breakpoint-up(md) {
-            --article-slider-width: calc(720px - 27rem);
+            --article-slider-width: calc(45rem - 27rem);
         }
         @include media-breakpoint-up(lg) {
             align-content: center;
