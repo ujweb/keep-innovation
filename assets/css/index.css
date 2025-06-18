@@ -2100,7 +2100,7 @@ main {
 
 .hero__banner {
   position: relative;
-  width: 100vw;
+  width: 100%;
   background-color: #27b4b9;
   overflow: hidden;
   z-index: 0; }
