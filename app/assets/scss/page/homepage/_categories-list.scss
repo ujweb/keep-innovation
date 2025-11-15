@@ -9,8 +9,15 @@
 
     @include media-breakpoint-up(lg) {
         gap: 4.375rem;
-        padding-top: 0;
+        padding-top: 23.625rem;
+        padding-bottom: 5rem;
         margin-bottom: 5rem;
+    }
+    @media screen and (min-height: 48rem) {
+        padding-top: 17rem;
+    }
+    @media screen and (min-height: 62.5rem) {
+        padding-top: 10.75rem;
     }
 
     .container {
@@ -142,15 +149,10 @@
             gap: 1.5rem;
 
             @include media-breakpoint-up(md) {
+                grid-template-columns: 458fr 366fr;
                 gap: 2.5rem;
                 padding-left: 2rem;
                 padding-right: 2rem;
-                @include parent-append(" .category__item:nth-child(odd) ", 2) {
-                    grid-template-columns: 458fr 366fr;
-                }
-                @include parent-append(" .category__item:nth-child(even) ", 2) {
-                    grid-template-columns: 366fr 458fr;
-                }
             }
         }
         .panel--image {
@@ -158,9 +160,7 @@
             order: 1;
             @include media-breakpoint-up(md) {
                 padding: 1.25rem;
-                @include parent-append(" .category__item:nth-child(odd) ", 2) {
-                    order: -1;
-                }
+                order: -1;
             }
         }
         img {
@@ -182,9 +182,6 @@
             @include media-breakpoint-up(md) {
                 gap: 1.25rem;
                 padding: 1.25rem 1.25rem 1.25rem 0.625rem;
-                @include parent-append(" .category__item:nth-child(even) ", 2) {
-                    padding: 1.25rem 0.625rem 1.25rem 1.25rem;
-                }
             }
             @include media-breakpoint-down(md) {
                 align-items: center;

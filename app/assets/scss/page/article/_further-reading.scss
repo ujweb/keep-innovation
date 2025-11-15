@@ -33,6 +33,11 @@
         align-items: center;
         gap: 1.875rem;
         color: $dark;
+        &:hover {
+            i.icon-arrow-right {
+                transform: translateX(0.5rem);
+            }
+        }
     }
     .article-name {
         width: calc(100% - 1.875rem - 1.5rem);
@@ -54,5 +59,6 @@
         aspect-ratio: 1/1;
         background-color: $secondary;
         border-radius: 50%;
+        transition: transform 0.3s;
     }
 }
