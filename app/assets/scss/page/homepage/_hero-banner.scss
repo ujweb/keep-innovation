@@ -165,12 +165,12 @@
                     height: 10rem;
                 }
                 &::before {
-                    // transform: translateX(-100%);
-                    // animation: paginationHor 0s forwards alternate linear;
-                    // @include media-breakpoint-up(lg) {
-                    //     transform: translateY(-100%);
-                    //     animation: paginationVer 0s forwards alternate linear;
-                    // }
+                    transform: translateX(-100%);
+                    animation: paginationHor 0s forwards alternate linear;
+                    @include media-breakpoint-up(lg) {
+                        transform: translateY(-100%);
+                        animation: paginationVer 0s forwards alternate linear;
+                    }
                 }
             }
         }
