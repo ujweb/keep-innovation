@@ -153,6 +153,10 @@
                 gap: 2.5rem;
                 padding-left: 2rem;
                 padding-right: 2rem;
+
+                &.reverse {
+                    grid-template-columns: 366fr 458fr;
+                }
             }
         }
         .panel--image {
@@ -161,6 +165,9 @@
             @include media-breakpoint-up(md) {
                 padding: 1.25rem;
                 order: -1;
+                @include parent-append(" .reverse") {
+                    order: 1;
+                }
             }
         }
         img {
@@ -182,6 +189,9 @@
             @include media-breakpoint-up(md) {
                 gap: 1.25rem;
                 padding: 1.25rem 1.25rem 1.25rem 0.625rem;
+                @include parent-append(" .reverse") {
+                    order: 0;
+                }
             }
             @include media-breakpoint-down(md) {
                 align-items: center;

@@ -36,7 +36,7 @@ const heroBannerFlickings = selectors.map(createHeroBannerFlicking);
 // 加入 Sync 插件（假設第一個為主控）
 heroBannerFlickings[0].addPlugins(
     new Flicking.Plugins.Sync({
-        type: "camera",
+        type: "index",
         synchronizedFlickingOptions: heroBannerFlickings.map(flicking => ({
             flicking,
             isClickable: false
