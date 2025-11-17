@@ -37,7 +37,7 @@ $(document).ready(() => {
 document.querySelectorAll(".img__container img").forEach((el) => {
     const container = el.parentElement;
     const width = el.offsetWidth;
-    if (width < 100) {
+    if (width < 105) {
         container.classList.add("img__container--lg");
     } else {
         container.classList.remove("img__container--lg");
