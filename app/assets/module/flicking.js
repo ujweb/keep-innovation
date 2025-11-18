@@ -2,7 +2,6 @@ const slider__item = document.querySelectorAll(".slider__item")
 const createHeroBannerFlicking = (selector) => {
     return new Flicking(selector, {
         circular: true,
-        renderOnlyVisible: true,
     })
         .on("willChange", function (e) {
             const index = e.index;
@@ -83,7 +82,6 @@ const flickingOptions = {
     panelsPerView: 1,
     align: "center",
     moveType: "strict",
-    renderOnlyVisible: true,
 };
 
 document.querySelectorAll(".item__slider--flicking").forEach((el) => {

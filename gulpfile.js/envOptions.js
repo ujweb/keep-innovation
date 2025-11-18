@@ -20,6 +20,9 @@ let envOptions = {
         src: [`${srcPath}/assets/scss/**/*.scss`, `${srcPath}/assets/scss/**/*.sass`],
         path: `${distPath}/assets/css`,
     },
+    module: {
+        src: [`${srcPath}/assets/module/**/*`],
+    },
     javascript: {
         src: [`${srcPath}/assets/js/**/*.js`],
         concat: "main.js",
@@ -32,9 +35,6 @@ let envOptions = {
     },
     img: {
         src: [`${srcPath}/assets/images/**/*`],
-    },
-    module: {
-        src: [`${srcPath}/assets/module/**/*`],
     },
     fonts: {
         src: [`${srcPath}/assets/fonts/**/*`],
