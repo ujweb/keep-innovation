@@ -45,12 +45,6 @@ const expansionData = [
 ];
 const creationData = [
     {
-        slug: "strongwises",
-        label: "創建期",
-        article: "樺漢集團母雞帶小雞 領資安新強人邊信聯走出新天地",
-        compony: "雄材大智材料科技股份有限公司",
-    },
-    {
         slug: "freebionics",
         label: "創建期",
         article: "樺漢集團母雞帶小雞 領資安新強人邊信聯走出新天地",
@@ -75,12 +69,6 @@ const growingData = [
         label: "成長期",
         article: "樺漢集團母雞帶小雞 領資安新強人邊信聯走出新天地",
         compony: "鴻躉股份有限公司",
-    },
-    {
-        slug: "fontrip",
-        label: "成長期",
-        article: "樺漢集團母雞帶小雞 領資安新強人邊信聯走出新天地",
-        compony: "豐趣科技股份有限公司",
     },
 ];
 
