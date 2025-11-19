@@ -1,4 +1,4 @@
-// 三組資料（你可自行替換）
+// 三組資料
 const expansionData = [
     {
         slug: "rapidtek",
@@ -47,28 +47,28 @@ const creationData = [
     {
         slug: "freebionics",
         label: "創建期",
-        article: "樺漢集團母雞帶小雞 領資安新強人邊信聯走出新天地",
-        compony: "福寶科技股份有限公司",
+        article: "讓人重新站起來的力量 從技術創業到政策共伴的智慧醫療典範",
+        compony: "福寶科技",
     },
 ];
 const growingData = [
     {
         slug: "etreego",
         label: "成長期",
-        article: "樺漢集團母雞帶小雞 領資安新強人邊信聯走出新天地",
-        compony: "起而行綠能股份有限公司",
+        article: "從工研院走出的綠能實踐者 打造台灣電動車充電生態的永續之路",
+        compony: "起而行綠能",
     },
     {
         slug: "cancerfree",
         label: "成長期",
-        article: "樺漢集團母雞帶小雞 領資安新強人邊信聯走出新天地",
-        compony: "精拓生技股份有限公司",
+        article: "讓 AI 走進實驗室 打造癌症治療的「數據決策平台」",
+        compony: "精拓生技",
     },
     {
         slug: "tsgc",
         label: "成長期",
-        article: "樺漢集團母雞帶小雞 領資安新強人邊信聯走出新天地",
-        compony: "鴻躉股份有限公司",
+        article: "以綠色技術翻轉能源終點，打造太陽能的第二生命",
+        compony: "鴻躉 TSGC",
     },
 ];
 

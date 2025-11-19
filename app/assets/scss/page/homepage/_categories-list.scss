@@ -28,6 +28,10 @@
         --theme-color: #073c40;
         --variant-color: #288990;
 
+        + .category__item {
+            margin-top: 3.125rem;
+        }
+
         &--blue {
             --theme-color: #073c40;
             --variant-color: #288990;
@@ -143,6 +147,8 @@
     }
 
     .flicking-panel {
+        width: 100%;
+
         .panel__group {
             display: grid;
             align-items: center;
@@ -191,6 +197,7 @@
                 padding: 1.25rem 1.25rem 1.25rem 0.625rem;
                 @include parent-append(" .reverse") {
                     order: 0;
+                    padding: 1.25rem 0.625rem 1.25rem 1.25rem;
                 }
             }
             @include media-breakpoint-down(md) {
