@@ -130,7 +130,15 @@ function onChangeFontSize(value) {
     document.body.classList.remove("fontsize--".concat(element));
   });
   document.body.classList.add("fontsize--".concat(value));
-}
+} // function onToggleFZSlideUp() {
+//     const dropdownEl = ".fontsize__dropdown";
+//     $(dropdownEl).slideUp();
+// }
+// function onToggleFZSlideDown() {
+//     const dropdownEl = ".fontsize__dropdown";
+//     $(dropdownEl).slideDown();
+// }
+
 
 $(document).ready(function () {
   googleTranslateElementInit();
@@ -145,7 +153,7 @@ document.querySelectorAll(".img__container img").forEach(function (el) {
   var container = el.parentElement;
   var width = el.offsetWidth;
 
-  if (width < 100) {
+  if (width < 105) {
     container.classList.add("img__container--lg");
   } else {
     container.classList.remove("img__container--lg");
