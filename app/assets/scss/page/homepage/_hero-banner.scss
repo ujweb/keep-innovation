@@ -166,10 +166,10 @@
                 }
                 &::before {
                     transform: translateX(-100%);
-                    animation: paginationHor 0s forwards alternate linear;
+                    animation: paginationHor 3s forwards alternate linear;
                     @include media-breakpoint-up(lg) {
                         transform: translateY(-100%);
-                        animation: paginationVer 0s forwards alternate linear;
+                        animation: paginationVer 3s forwards alternate linear;
                     }
                 }
             }

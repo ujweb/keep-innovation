@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
             ],
         })
     );
+    heroBannerFlickings[0].addPlugins(new Flicking.Plugins.AutoPlay({ duration: 3000 }));
+    heroBannerFlickings[0].addPlugins(new Flicking.Plugins.Fade());
 
     // Pagination
     const pagination = document.querySelectorAll(".hero__banner--pagination button");
