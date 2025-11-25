@@ -2101,7 +2101,7 @@ main {
 .hero__banner {
   position: relative;
   width: 100%;
-  background-color: #27b4b9;
+  background-color: #F3A460;
   overflow: hidden;
   z-index: 0; }
   @media (min-width: 992px) {
@@ -3152,9 +3152,11 @@ article {
   .article-background-orange.article-background {
     background-color: #f29745; }
   .article-background-blue.article-background {
-    background-color: #1AB6BB; }
+    background-color: #1ab6bb; }
   .article-background-yellow.article-background {
-    background-color: #FFD81B; }
+    background-color: #ffd81b; }
+  .article-background-purple.article-background {
+    background-color: #3d41bd; }
   @media (min-width: 768px) {
     .article-background {
       height: 17.5rem; } }
@@ -3200,9 +3202,11 @@ article {
       .article-background-orange.article-background span.light::before {
         background-color: #fadbb1; }
       .article-background-blue.article-background span.light::before {
-        background-color: #68C1BE; }
+        background-color: #68c1be; }
       .article-background-yellow.article-background span.light::before {
-        background-color: #FEFB8E; }
+        background-color: #fefb8e; }
+      .article-background-purple.article-background span.light::before {
+        background-color: #cacbea; }
       @media (min-width: 768px) {
         .article-background span.light::before {
           -webkit-transform: translate(-50%, -50%);
@@ -3217,9 +3221,11 @@ article {
       .article-background-orange.article-background span.light::after {
         background-color: #fadbb1; }
       .article-background-blue.article-background span.light::after {
-        background-color: #B3D2D0; }
+        background-color: #b3d2d0; }
       .article-background-yellow.article-background span.light::after {
-        background-color: #FEFB8E; }
+        background-color: #fefb8e; }
+      .article-background-purple.article-background span.light::after {
+        background-color: #cacbea; }
       @media (min-width: 768px) {
         .article-background span.light::after {
           -webkit-transform: translate(50%, 50%);
@@ -3236,9 +3242,11 @@ article {
       .article-background-orange.article-background span.dark::before {
         background-color: #f29745; }
       .article-background-blue.article-background span.dark::before {
-        background-color: #3BB5B8; }
+        background-color: #3bb5b8; }
       .article-background-yellow.article-background span.dark::before {
-        background-color: #FFD81B; }
+        background-color: #ffd81b; }
+      .article-background-purple.article-background span.dark::before {
+        background-color: #cacbea; }
       @media (min-width: 768px) {
         .article-background span.dark::before {
           -webkit-transform: translate(-50%, 50%);
@@ -3247,9 +3255,11 @@ article {
           .article-background-orange.article-background span.dark::before {
             background-color: #ec6303; }
           .article-background-blue.article-background span.dark::before {
-            background-color: #008B8B; }
+            background-color: #008b8b; }
           .article-background-yellow.article-background span.dark::before {
-            background-color: #F7B200; } }
+            background-color: #f7b200; }
+          .article-background-purple.article-background span.dark::before {
+            background-color: #cacbea; } }
     .article-background span.dark::after {
       top: 0;
       right: 0;
@@ -3259,9 +3269,11 @@ article {
       .article-background-orange.article-background span.dark::after {
         background-color: #f29745; }
       .article-background-blue.article-background span.dark::after {
-        background-color: #359C9B; }
+        background-color: #359c9b; }
       .article-background-yellow.article-background span.dark::after {
-        background-color: #FFFEFF; }
+        background-color: #fffeff; }
+      .article-background-purple.article-background span.dark::after {
+        background-color: #7479d7; }
       @media (min-width: 768px) {
         .article-background span.dark::after {
           -webkit-transform: translate(50%, -50%);
