@@ -3363,7 +3363,8 @@ article {
     font-weight: 500;
     line-height: 1.4;
     text-align: center;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    text-wrap: pretty; }
     @media (max-width: 767.98px) {
       .article-content .container > h2 {
         white-space: pre-line; } }
