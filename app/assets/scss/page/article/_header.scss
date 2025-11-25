@@ -13,10 +13,13 @@
         background-color: #f29745;
     }
     @at-root .article-background-blue#{&} {
-        background-color: #1AB6BB;
+        background-color: #1ab6bb;
     }
     @at-root .article-background-yellow#{&} {
-        background-color: #FFD81B;
+        background-color: #ffd81b;
+    }
+    @at-root .article-background-purple#{&} {
+        background-color: #3d41bd;
     }
     @include media-breakpoint-up(md) {
         height: 17.5rem;
@@ -58,10 +61,13 @@
                     background-color: #fadbb1;
                 }
                 @at-root .article-background-blue#{&} {
-                    background-color: #68C1BE;
+                    background-color: #68c1be;
                 }
                 @at-root .article-background-yellow#{&} {
-                    background-color: #FEFB8E;
+                    background-color: #fefb8e;
+                }
+                @at-root .article-background-purple#{&} {
+                    background-color: #cacbea;
                 }
                 @include media-breakpoint-up(md) {
                     transform: translate(-50%, -50%);
@@ -75,10 +81,13 @@
                     background-color: #fadbb1;
                 }
                 @at-root .article-background-blue#{&} {
-                    background-color: #B3D2D0;
+                    background-color: #b3d2d0;
                 }
                 @at-root .article-background-yellow#{&} {
-                    background-color: #FEFB8E;
+                    background-color: #fefb8e;
+                }
+                @at-root .article-background-purple#{&} {
+                    background-color: #cacbea;
                 }
                 @include media-breakpoint-up(md) {
                     transform: translate(50%, 50%);
@@ -97,10 +106,13 @@
                     background-color: #f29745;
                 }
                 @at-root .article-background-blue#{&} {
-                    background-color: #3BB5B8;
+                    background-color: #3bb5b8;
                 }
                 @at-root .article-background-yellow#{&} {
-                    background-color: #FFD81B;
+                    background-color: #ffd81b;
+                }
+                @at-root .article-background-purple#{&} {
+                    background-color: #cacbea;
                 }
                 @include media-breakpoint-up(md) {
                     transform: translate(-50%, 50%);
@@ -108,10 +120,13 @@
                         background-color: #ec6303;
                     }
                     @at-root .article-background-blue#{&} {
-                        background-color: #008B8B;
+                        background-color: #008b8b;
                     }
                     @at-root .article-background-yellow#{&} {
-                        background-color: #F7B200;
+                        background-color: #f7b200;
+                    }
+                    @at-root .article-background-purple#{&} {
+                        background-color: #cacbea;
                     }
                 }
             }
@@ -123,10 +138,13 @@
                     background-color: #f29745;
                 }
                 @at-root .article-background-blue#{&} {
-                    background-color: #359C9B;
+                    background-color: #359c9b;
                 }
                 @at-root .article-background-yellow#{&} {
-                    background-color: #FFFEFF;
+                    background-color: #fffeff;
+                }
+                @at-root .article-background-purple#{&} {
+                    background-color: #7479d7;
                 }
                 @include media-breakpoint-up(md) {
                     transform: translate(50%, -50%);

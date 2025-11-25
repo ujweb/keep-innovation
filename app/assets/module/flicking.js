@@ -56,15 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const onChangeHeroBannerBackground = (index) => {
         switch (index) {
             case 0:
-                switchToColorSet1();
-                break;
-            case 1:
                 switchToColorSet2();
                 break;
-            case 2:
+            case 1:
                 switchToColorSet3();
                 break;
-            case 3:
+            case 2:
                 switchToColorSet4();
                 break;
             default:

@@ -1,4 +1,32 @@
 // 三組資料
+const creationData = [
+    {
+        slug: "freebionics",
+        label: "創建期",
+        article: "讓人重新站起來的力量 從技術創業到政策共伴的智慧醫療典範",
+        compony: "福寶科技",
+    },
+];
+const growingData = [
+    {
+        slug: "etreego",
+        label: "成長期",
+        article: "從工研院走出的綠能實踐者 打造台灣電動車充電生態的永續之路",
+        compony: "起而行綠能",
+    },
+    {
+        slug: "cancerfree",
+        label: "成長期",
+        article: "讓 AI 走進實驗室 打造癌症治療的「數據決策平台」",
+        compony: "精拓生技",
+    },
+    {
+        slug: "tsgc",
+        label: "成長期",
+        article: "以綠色技術翻轉能源終點，打造太陽能的第二生命",
+        compony: "鴻躉 TSGC",
+    },
+];
 const expansionData = [
     {
         slug: "rapidtek",
@@ -43,40 +71,12 @@ const expansionData = [
         compony: "邊信聯",
     },
 ];
-const creationData = [
-    {
-        slug: "freebionics",
-        label: "創建期",
-        article: "讓人重新站起來的力量 從技術創業到政策共伴的智慧醫療典範",
-        compony: "福寶科技",
-    },
-];
-const growingData = [
-    {
-        slug: "etreego",
-        label: "成長期",
-        article: "從工研院走出的綠能實踐者 打造台灣電動車充電生態的永續之路",
-        compony: "起而行綠能",
-    },
-    {
-        slug: "cancerfree",
-        label: "成長期",
-        article: "讓 AI 走進實驗室 打造癌症治療的「數據決策平台」",
-        compony: "精拓生技",
-    },
-    {
-        slug: "tsgc",
-        label: "成長期",
-        article: "以綠色技術翻轉能源終點，打造太陽能的第二生命",
-        compony: "鴻躉 TSGC",
-    },
-];
 
-const dataSets = [expansionData, creationData, growingData];
+const dataSets = [creationData, growingData, expansionData];
 
 /**
  * 將資料填入單一組結構
- * @param {Array} data  資料陣列（expansionData / creationData / growingData）
+ * @param {Array} data  資料陣列（creationData / growingData / expansionData）
  * @param {Number} groupIndex  第幾組（1、2、3）
  */
 function fillGroup(data, groupIndex) {
