@@ -12,9 +12,9 @@ const paddingBottom = 444;
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / (window.innerHeight + paddingBottom), 0.1, 100);
 
 // 初始顏色
-let color1 = new THREE.Color("#F3A460");
-let color2 = new THREE.Color("#FDEED8");
-let color3 = new THREE.Color("#ED7012");
+let color1 = new THREE.Color("#27B4B9");
+let color2 = new THREE.Color("#D8EFEE");
+let color3 = new THREE.Color("#0E8A89");
 
 // 顏色過渡變數
 let targetColor1 = color1.clone();
@@ -26,9 +26,9 @@ let transitionDuration = 1;
 let transitionStartTime = null;
 
 const params = {
-    color1: "#F3A460",
-    color2: "#FDEED8",
-    color3: "#ED7012",
+    color1: "#27B4B9",
+    color2: "#D8EFEE",
+    color3: "#0E8A89",
     uStrength: 3.4,
     uSpeed: 0.25,
     uDensity: 1.2,
@@ -172,24 +172,24 @@ function updateColors(t) {
 }
 
 // 顏色切換函數
-// function switchToColorSet1() {
-//     targetColor1 = new THREE.Color("#27B4B9");
-//     targetColor2 = new THREE.Color("#D8EFEE");
-//     targetColor3 = new THREE.Color("#0E8A89");
-//     transitionStartTime = null; // 重置過渡時間
-// }
+function switchToColorSet1() {
+    targetColor1 = new THREE.Color("#27B4B9");
+    targetColor2 = new THREE.Color("#D8EFEE");
+    targetColor3 = new THREE.Color("#0E8A89");
+    transitionStartTime = null; // 重置過渡時間
+}
 
 function switchToColorSet2() {
-    targetColor1 = new THREE.Color("#F3A460");
-    targetColor2 = new THREE.Color("#FDEED8");
-    targetColor3 = new THREE.Color("#ED7012");
+    targetColor1 = new THREE.Color("#FFE029");
+    targetColor2 = new THREE.Color("#FFFBEB");
+    targetColor3 = new THREE.Color("#F8B300");
     transitionStartTime = null; // 重置過渡時間
 }
 
 function switchToColorSet3() {
-    targetColor1 = new THREE.Color("#FFE029");
-    targetColor2 = new THREE.Color("#FFFBEB");
-    targetColor3 = new THREE.Color("#F8B300");
+    targetColor1 = new THREE.Color("#F3A460");
+    targetColor2 = new THREE.Color("#FDEED8");
+    targetColor3 = new THREE.Color("#ED7012");
     transitionStartTime = null; // 重置過渡時間
 }
 
@@ -200,7 +200,7 @@ function switchToColorSet4() {
     transitionStartTime = null; // 重置過渡時間
 }
 
-// window.switchToColorSet1 = switchToColorSet1;
+window.switchToColorSet1 = switchToColorSet1;
 window.switchToColorSet2 = switchToColorSet2;
 window.switchToColorSet3 = switchToColorSet3;
 window.switchToColorSet4 = switchToColorSet4;
