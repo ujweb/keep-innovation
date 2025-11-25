@@ -2294,15 +2294,15 @@ main {
         -webkit-transform: translateX(-100%);
             -ms-transform: translateX(-100%);
                 transform: translateX(-100%);
-        -webkit-animation: paginationHor 0s forwards alternate linear;
-                animation: paginationHor 0s forwards alternate linear; }
+        -webkit-animation: paginationHor 3s forwards alternate linear;
+                animation: paginationHor 3s forwards alternate linear; }
         @media (min-width: 992px) {
           .hero__banner--pagination button.active::before {
             -webkit-transform: translateY(-100%);
                 -ms-transform: translateY(-100%);
                     transform: translateY(-100%);
-            -webkit-animation: paginationVer 0s forwards alternate linear;
-                    animation: paginationVer 0s forwards alternate linear; } }
+            -webkit-animation: paginationVer 3s forwards alternate linear;
+                    animation: paginationVer 3s forwards alternate linear; } }
   .hero__banner__image {
     position: relative;
     display: -webkit-box;
