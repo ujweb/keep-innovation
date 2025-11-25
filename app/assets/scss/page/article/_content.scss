@@ -23,6 +23,7 @@
             line-height: 1.4;
             text-align: center;
             text-transform: capitalize;
+            text-wrap: pretty;
             @include media-breakpoint-down(md) {
                 white-space: pre-line;
             }
