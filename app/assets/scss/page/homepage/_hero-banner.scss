@@ -21,17 +21,21 @@
         bottom: 0;
         left: 50%;
         width: 100%;
+        padding-top: calc(100 / 125 * 100vw);
         aspect-ratio: 1.25/1;
         transform: translateX(-50%);
         pointer-events: none;
 
         @include media-breakpoint-up(sm) {
+            padding-top: 100vw;
             aspect-ratio: 1/1;
         }
         @include media-breakpoint-up(md) {
+            padding-top: calc(100 / 200 * 100vw);
             aspect-ratio: 2/1;
         }
         @include media-breakpoint-up(lg) {
+            padding-top: calc(31 / 144 * 100vw);
             aspect-ratio: 144/31;
         }
     }
