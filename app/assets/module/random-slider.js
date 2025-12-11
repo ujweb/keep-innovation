@@ -11,7 +11,7 @@ const growingData = [
     {
         slug: "etreego",
         label: "成長期",
-        article: "從工研院走出的綠能實踐者 打造台灣電動車充電生態的永續之路",
+        article: "從工研院走出的綠能實踐者 打造臺灣電動車充電生態的永續之路",
         compony: "起而行綠能",
     },
     {
