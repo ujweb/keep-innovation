@@ -70,6 +70,12 @@ const expansionData = [
         article: "樺漢集團母雞帶小雞 領資安新強人邊信聯走出新天地",
         compony: "邊信聯",
     },
+    {
+        slug: "eui",
+        label: "擴張期",
+        article: "跨境金融的領航者 - 以合規為引擎的金融科技創新者",
+        compony: "東聯互動",
+    },
 ];
 
 const dataSets = [creationData, growingData, expansionData];
