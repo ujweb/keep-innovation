@@ -39,5 +39,9 @@
         @include media-breakpoint-up(md) {
             font-size: calc(2.5rem + var(--bracket));
         }
+
+        span {
+            text-transform: none;
+        }
     }
 }
